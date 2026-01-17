@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankush Ganesh — Product Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">AG</a>
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#setup">Setup</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Ankush Ganesh</span></h1>
+      <p class="hero-subtitle">Product Engineer</p>
+      <p class="hero-description">
+        Building secure, optimized macOS & iOS products. Specializing in enterprise MDM, 
+        IAM, and security-focused systems with 2.5+ years of experience.
+      </p>
+      <div class="hero-contact">
+        <a href="mailto:masterankush0115@gmail.com" class="contact-link">masterankush0115@gmail.com</a>
+        <span class="separator">•</span>
+        <a href="tel:+916301598117" class="contact-link">+91-6301598117</a>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#" class="btn btn-secondary" id="resume-link">Resume</a>
+        <a href="https://github.com" target="_blank" class="btn btn-secondary">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="section-header">
+      <h2>Experience</h2>
+      <p class="section-subtitle">For detailed experience, please see my <a href="#" class="resume-link" id="resume-link-section">resume</a>.</p>
+    </div>
+    
+    <!-- Full-time Experience -->
+    <div class="experience-item">
+      <div class="experience-header">
+        <div>
+          <h3>Promobi Technologies</h3>
+          <p class="experience-role">Product Engineer</p>
+        </div>
+        <span class="experience-date">Jun 2023 – Present</span>
+      </div>
+      <p class="experience-location">Pune, India</p>
+      
+      <div class="experience-project">
+        <h4>Scalefusion</h4>
+        <p class="project-description">
+          Developed macOS and iOS clients for Scalefusion, a leading MDM solution. Built system-level features including 
+          device control, custom authentication flows, automated update systems, and CI/CD pipelines.
+        </p>
+      </div>
+
+      <div class="experience-project">
+        <h4>NuovoPay</h4>
+        <p class="project-description">
+          Built the macOS client for NuovoPay, a Device Financing Risk Management platform. Implemented custom lock screens 
+          with offline support, automated packaging/notarization, and remote update mechanisms.
+        </p>
+      </div>
+    </div>
+
+    <!-- Internship Experience -->
+    <div class="experience-item">
+      <div class="experience-header">
+        <div>
+          <h3>Promobi Technologies</h3>
+          <p class="experience-role">Product Engineer Intern</p>
+        </div>
+        <span class="experience-date">Jan 2023 – Jun 2023</span>
+      </div>
+      <p class="experience-location">Pune, India</p>
+      
+      <div class="experience-project">
+        <h4>BrewAssets</h4>
+        <p class="project-description">
+          Delivered an end-to-end device inventory and tracking solution within 3 months. Built cross-platform utilities 
+          for macOS and iOS, and integrated a centralized reporting dashboard.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-header">
+      <h2>Projects</h2>
+    </div>
+    
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-header">
+          <h3>n8n Automation</h3>
+          <span class="project-badge">Personal Project</span>
+        </div>
+        <p class="project-description">
+          Deployed a self-hosted n8n workflow automation platform on Google Cloud using Docker and Ngrok.
+        </p>
+        <ul class="project-features">
+          <li>Built and actively use automated workflows including Gmail classification/labeling</li>
+          <li>Telegram-based expense tracking bot</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">n8n</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Google Cloud</span>
+          <span class="tag">Automation</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Enterprise Device Control System</h3>
+        </div>
+        <p class="project-description">
+          macOS system extension for controlling and auditing device access in managed environments using Endpoint Security Framework.
+        </p>
+        <div class="project-tags">
+          <span class="tag">macOS</span>
+          <span class="tag">Swift</span>
+          <span class="tag">Endpoint Security</span>
+          <span class="tag">Security</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Automated App Update Manager</h3>
+        </div>
+        <p class="project-description">
+          System to manage and deploy updates across 500+ macOS applications, significantly reducing manual maintenance overhead.
+        </p>
+        <div class="project-tags">
+          <span class="tag">macOS</span>
+          <span class="tag">Automation</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Custom macOS Login Window (OneID)</h3>
+        </div>
+        <p class="project-description">
+          Custom macOS login and authentication flow with enterprise IAM integration, featuring location, network, and time-based access controls.
+        </p>
+        <div class="project-tags">
+          <span class="tag">macOS</span>
+          <span class="tag">IAM</span>
+          <span class="tag">Authentication</span>
+          <span class="tag">Swift</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>VoteBlock</h3>
+          <span class="project-badge">Personal Project</span>
+        </div>
+        <p class="project-description">
+          Developed a blockchain-based voting system to enhance security, transparency, and trust in e-voting. 
+          Designed a decentralized ledger and a secure, user-friendly interface.
+        </p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Solidity</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">TailwindCSS</span>
+          <span class="tag">Blockchain</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>ShareMe</h3>
+          <span class="project-badge">Personal Project</span>
+        </div>
+        <p class="project-description">
+          Created a Pinterest clone to share, like, comment, and download images. 
+          Deployed using Netlify with ReactJS, Tailwind, Sanity, and Google Identity Service.
+        </p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Sanity</span>
+          <span class="tag">Netlify</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Blood Bank Management Website</h3>
+          <span class="project-badge">Personal Project</span>
+        </div>
+        <p class="project-description">
+          Created a website to digitize workflow of blood donation in India. Users can register for appointments, 
+          and locate nearby donors and blood banks.
+        </p>
+        <div class="project-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">CSS</span>
+          <span class="tag">NodeJS</span>
+          <span class="tag">Firebase</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Food Management Website</h3>
+          <span class="project-badge">Personal Project</span>
+        </div>
+        <p class="project-description">
+          Created a website for managing food inventory for Akshay Patra NGO. Users can see nearby NGO food centres 
+          and admins can view food inventory details.
+        </p>
+        <div class="project-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">NodeJS</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Poll App</h3>
+          <span class="project-badge">Personal Project</span>
+        </div>
+        <p class="project-description">
+          Created an Android app for users to take quick polls, quizzes and analyze responses. 
+          Developed using Java and Firebase.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Java</span>
+          <span class="tag">Android</span>
+          <span class="tag">Firebase</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <div class="section-header">
+      <h2>About</h2>
+    </div>
+    
+    <div class="about-content">
+      <p class="about-text">
+        Outside of work, I'm passionate about building personal projects, gaming, and exploring new places. 
+        When I'm not coding or gaming, you'll find me watching series, planning trips, or working on my setup. 
+        I believe in continuous learning and enjoy diving into new technologies and side projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOBBIES & INTERESTS -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Hobbies & Interests</h2>
+    </div>
+    
+    <div class="hobbies-grid">
+      <div class="hobby-card">
+        <h3 class="hobby-name">Tech & Building Setups</h3>
+        <p class="hobby-description">Passionate about building and optimizing tech setups. Always exploring new hardware and creating the perfect workspace.</p>
+      </div>
+      
+      <div class="hobby-card">
+        <h3 class="hobby-name">Gaming</h3>
+        <p class="hobby-description">Love exploring different game genres and experiencing immersive storytelling through interactive media.</p>
+      </div>
+      
+      <div class="hobby-card">
+        <h3 class="hobby-name">Football</h3>
+        <p class="hobby-description">Following football matches and enjoying the beautiful game's strategy and excitement.</p>
+      </div>
+      
+      <div class="hobby-card">
+        <h3 class="hobby-name">F1</h3>
+        <p class="hobby-description">Fascinated by Formula 1 racing, following the technical innovations and competitive racing.</p>
+      </div>
+      
+      <div class="hobby-card">
+        <h3 class="hobby-name">Anime</h3>
+        <p class="hobby-description">Enjoying diverse anime series and appreciating the unique storytelling and art styles.</p>
+      </div>
+      
+      <div class="hobby-card">
+        <h3 class="hobby-name">Learning Piano</h3>
+        <p class="hobby-description">Currently learning piano and exploring the world of music through practice and dedication.</p>
+      </div>
+      
+      <div class="hobby-card">
+        <h3 class="hobby-name">Travel & Exploration</h3>
+        <p class="hobby-description">Love exploring new places, planning trips, and discovering different cultures and experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETUP GALLERY -->
+  <section id="setup" class="section">
+    <div class="section-header">
+      <h2>My Setup</h2>
+      <p class="section-subtitle">Click to see the evolution over time</p>
+    </div>
+    
+    <div class="current-setup-container">
+      <div class="current-setup-card" id="setup-trigger">
+        <div class="current-setup-image-wrapper">
+          <img src="resources/pc-setup/IMG_20251122_220728177.jpg" alt="Current Setup" class="current-setup-image" />
+          <div class="setup-hover-overlay">
+            <span class="setup-hover-text">View Evolution →</span>
+          </div>
+        </div>
+        <p class="current-setup-label">Current Setup · November 2025</p>
+      </div>
+    </div>
+
+    <!-- Modal Gallery -->
+    <div id="setup-modal" class="setup-modal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <h2 class="modal-title">Setup Evolution</h2>
+        <div class="modal-gallery" id="modal-gallery">
+          <!-- Images will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="section">
+    <div class="section-header">
+      <h2>Publications</h2>
+    </div>
+    
+    <div class="publication-item">
+      <h3>
+        <a href="https://www.mdpi.com/2571-5577/6/4/70" target="_blank" class="publication-link">
+          Secure Voting Website Using Ethereum and Smart Contracts
+        </a>
+      </h3>
+      <p class="publication-description">
+        Researched and proposed a blockchain-based voting model to enhance the accessibility, security, 
+        and efficiency of the voting system. Published in MDPI.
+      </p>
+      <div class="publication-tags">
+        <span class="tag">Blockchain</span>
+        <span class="tag">Ethereum</span>
+        <span class="tag">Smart Contracts</span>
+        <span class="tag">Research</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="section-header">
+      <h2>Skills</h2>
+    </div>
+    
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Swift</span>
+          <span class="skill-tag">Objective-C</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Frameworks & Technologies</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">UIKit</span>
+          <span class="skill-tag">Cocoa</span>
+          <span class="skill-tag">SwiftUI</span>
+          <span class="skill-tag">Realm</span>
+          <span class="skill-tag">Endpoint Security</span>
+          <span class="skill-tag">WKWebView</span>
+          <span class="skill-tag">REST API</span>
+          <span class="skill-tag">Swift Data</span>
+          <span class="skill-tag">Swift Testing</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">NodeJS</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Developer Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Xcode</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">JIRA</span>
+          <span class="skill-tag">Agile Workflow</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">TestFlight</span>
+          <span class="skill-tag">GitLab CI</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Bash Scripting</span>
+          <span class="skill-tag">Ngrok</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Core Subjects</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Data Structures & Algorithms</span>
+          <span class="skill-tag">Operating Systems</span>
+          <span class="skill-tag">Networking</span>
+          <span class="skill-tag">Database Management</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Education</h2>
+    </div>
+    
+    <div class="education-item">
+      <h3>B.Tech (Computer Science)</h3>
+      <p class="education-school">Symbiosis Institute of Technology</p>
+      <p class="education-details">2019-2023 · GPA: 7.64/10</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact" class="footer">
+    <div class="footer-content">
+      <h2>Get in Touch</h2>
+      <p>I'm always open to discussing new opportunities and interesting projects.</p>
+      <div class="footer-links">
+        <a href="mailto:masterankush0115@gmail.com" class="footer-link">
+          <span>Email</span>
+        </a>
+        <a href="https://github.com" target="_blank" class="footer-link">
+          <span>GitHub</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="footer-link">
+          <span>LinkedIn</span>
+        </a>
+      </div>
+      <p class="footer-copyright">© 2024 Ankush Ganesh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Setup images with dates parsed from filenames
+    const setupImages = [
+      { file: 'IMG_20230825_200459808.jpg', date: 'August 25, 2023' },
+      { file: 'IMG_20230825_200631819.jpg', date: 'August 25, 2023' },
+      { file: 'IMG_20231010_221230100.jpg', date: 'October 10, 2023' },
+      { file: 'IMG_20240412_212234033.jpg', date: 'April 12, 2024' },
+      { file: 'IMG_20240419_214143308.jpg', date: 'April 19, 2024' },
+      { file: 'IMG_20240622_231211952.jpg', date: 'June 22, 2024' },
+      { file: 'IMG_20240623_183622804.jpg', date: 'June 23, 2024' },
+      { file: 'IMG_20240623_183716454.jpg', date: 'June 23, 2024' },
+      { file: 'IMG_20250122_005830900.jpg', date: 'January 22, 2025' },
+      { file: 'IMG_20250420_212308174.jpg', date: 'April 20, 2025' },
+      { file: 'IMG_20250518_010528822.jpg', date: 'May 18, 2025' },
+      { file: 'IMG_20250518_010533647.jpg', date: 'May 18, 2025' },
+      { file: 'IMG_20250702_225641914.jpg', date: 'July 2, 2025' },
+      { file: 'IMG_20250716_202506504.jpg', date: 'July 16, 2025' },
+      { file: 'IMG_20250717_120201767.jpg', date: 'July 17, 2025' },
+      { file: 'IMG_20250817_112755900.jpg', date: 'August 17, 2025' },
+      { file: 'IMG_20250817_112835249.jpg', date: 'August 17, 2025' },
+      { file: 'IMG_20250915_122948786.jpg', date: 'September 15, 2025' },
+      { file: 'IMG_20250924_230317940.jpg', date: 'September 24, 2025' },
+      { file: 'IMG_20251122_220728177.jpg', date: 'November 22, 2025' }
+    ];
+
+    // Sort by date (most recent first)
+    setupImages.sort((a, b) => {
+      return new Date(b.date) - new Date(a.date);
+    });
+
+    // Modal elements
+    const modal = document.getElementById('setup-modal');
+    const trigger = document.getElementById('setup-trigger');
+    const closeBtn = document.getElementById('modal-close');
+    const gallery = document.getElementById('modal-gallery');
+
+    // Populate gallery
+    setupImages.forEach((img, index) => {
+      const item = document.createElement('div');
+      item.className = 'modal-setup-item';
+      item.innerHTML = `
+        <div class="modal-image-container">
+          <img src="resources/pc-setup/${img.file}" alt="Setup ${img.date}" loading="lazy" />
+          <div class="modal-overlay">
+            <span class="modal-date">${img.date}</span>
+          </div>
+        </div>
+      `;
+      gallery.appendChild(item);
+    });
+
+    // Open modal
+    trigger.addEventListener('click', () => {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Close modal
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.querySelector('.modal-backdrop').addEventListener('click', closeModal);
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
