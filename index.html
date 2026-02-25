@@ -47,7 +47,7 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="section">
+  <section id="experience" class="section fade-in">
     <div class="section-header">
       <h2>Experience</h2>
       <p class="section-subtitle">For detailed experience, please see my <a href="resources/Ankush_Resume_Swift.pdf" target="_blank" class="resume-link" id="resume-link-section">resume</a>.</p>
@@ -103,12 +103,12 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section">
+  <section id="projects" class="section fade-in">
     <div class="section-header">
       <h2>Projects</h2>
     </div>
     
-    <div class="projects-grid">
+    <div class="projects-grid stagger">
       <div class="project-card">
         <div class="project-header">
           <h3>Money Manager</h3>
@@ -319,7 +319,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="section">
+  <section class="section fade-in">
     <div class="section-header">
       <h2>About</h2>
     </div>
@@ -334,12 +334,12 @@
   </section>
 
   <!-- HOBBIES & INTERESTS -->
-  <section class="section">
+  <section class="section fade-in">
     <div class="section-header">
       <h2>Hobbies & Interests</h2>
     </div>
     
-    <div class="hobbies-list">
+    <div class="hobbies-list stagger">
       <span class="hobby-tag">Tech & Building Setups</span>
       <span class="hobby-tag">Gaming</span>
       <span class="hobby-tag">Football</span>
@@ -383,7 +383,7 @@
   -->
 
   <!-- PUBLICATIONS -->
-  <section id="publications" class="section">
+  <section id="publications" class="section fade-in">
     <div class="section-header">
       <h2>Publications</h2>
     </div>
@@ -408,12 +408,12 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section">
+  <section id="skills" class="section fade-in">
     <div class="section-header">
       <h2>Skills</h2>
     </div>
     
-    <div class="skills-grid">
+    <div class="skills-grid stagger">
       <div class="skill-category">
         <h3>Languages</h3>
         <div class="skill-tags">
@@ -471,7 +471,7 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section id="certifications" class="section">
+  <section id="certifications" class="section fade-in">
     <div class="section-header">
       <h2>Certifications</h2>
       <p class="section-subtitle">In progess 🧑🏻‍💻</p>
@@ -479,7 +479,7 @@
   </section>
 
   <!-- EDUCATION -->
-  <section class="section">
+  <section class="section fade-in">
     <div class="section-header">
       <h2>Education</h2>
     </div>
@@ -551,6 +551,17 @@
     function updateThemeIcon(theme) {
       themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
     }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .stagger').forEach(el => observer.observe(el));
 
     // Setup images code (commented out - uncomment when setup section is enabled)
     /*
