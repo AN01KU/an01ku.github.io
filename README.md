@@ -1,5 +1,3 @@
-# an01ku.github.io
-
 Personal portfolio site hosted on GitHub Pages.
 
 Live site: https://an01ku.github.io/
