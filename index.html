@@ -17,6 +17,7 @@
       <div class="nav-links">
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#homelab">HomeLab</a>
         <a href="#skills">Skills</a>
         <a href="#certifications">Certifications</a>
         <a href="#publications">Publications</a>
@@ -32,10 +33,10 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Hi, I'm <span class="highlight">Ankush Ganesh</span></h1>
-      <p class="hero-subtitle">Software Engineer</p>
+      <p class="hero-subtitle">Software Engineer · Apple Platform Specialist</p>
       <p class="hero-description">
-        Building secure, optimized macOS & iOS products. Specializing in enterprise MDM, 
-        IAM, and security-focused systems with 2.5+ years of experience.
+        Building secure, scalable systems on Apple platforms for enterprise security — endpoint visibility, 
+        data loss prevention, and sensitive data protection across macOS sensors, DLP, and DSPM.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View Work</a>
@@ -68,27 +69,48 @@
       <p class="section-subtitle">Check out my <a href="resources/Ankush_Resume_Swift.pdf" target="_blank" class="resume-link" id="resume-link-section">resume</a>.</p>
     </div>
     
-    <!-- Full-time Experience -->
+    <!-- Cyberhaven -->
     <div class="experience-item">
       <div class="experience-header">
         <div>
-          <h3>Promobi Technologies</h3>
+          <h3><a href="https://www.cyberhaven.com" target="_blank" rel="noopener noreferrer" class="experience-company-link">Cyberhaven</a></h3>
+          <p class="experience-role">Software Engineer</p>
+        </div>
+        <span class="experience-date">Aug 2026 – Present</span>
+      </div>
+      <p class="experience-location">Bangalore, India · Hybrid</p>
+
+      <div class="experience-project">
+        <p class="project-description">
+          Developing and enhancing the macOS sensor with system-level capabilities for enterprise data security and endpoint visibility. 
+          Building Data Loss Prevention (DLP) capabilities to detect, monitor, and prevent sensitive data exfiltration across endpoint activity. 
+          Working on Data Security Posture Management (DSPM) to improve visibility into sensitive data, its movement, and associated security risks.
+        </p>
+      </div>
+    </div>
+
+    <!-- Promobi Technologies -->
+    <div class="experience-item">
+      <div class="experience-header">
+        <div>
+          <h3><a href="https://www.promobitech.com/" target="_blank" rel="noopener noreferrer" class="experience-company-link">Promobi Technologies</a></h3>
           <p class="experience-role">Product Engineer</p>
         </div>
-        <span class="experience-date">Jun 2023 – Present</span>
+        <span class="experience-date">Jun 2023 – Aug 2026</span>
       </div>
       <p class="experience-location">Pune, India</p>
       
       <div class="experience-project">
-        <h4>Scalefusion</h4>
+        <h4><a href="https://scalefusion.com" target="_blank" rel="noopener noreferrer" class="experience-company-link">Scalefusion</a></h4>
         <p class="project-description">
           Developed macOS and iOS clients for Scalefusion, a leading MDM solution. Built system-level features including 
-          device control, custom authentication flows, automated update systems, and CI/CD pipelines.
+          device control, custom authentication flows, automated update systems for 500+ macOS applications, and CI/CD pipelines 
+          with automated unit tests.
         </p>
       </div>
 
       <div class="experience-project">
-        <h4>NuovoPay</h4>
+        <h4><a href="https://nuovopay.com" target="_blank" rel="noopener noreferrer" class="experience-company-link">NuovoPay</a></h4>
         <p class="project-description">
           Built the macOS client for NuovoPay, a Device Financing Risk Management platform. Implemented custom lock screens 
           with offline support, automated packaging/notarization, and remote update mechanisms.
@@ -103,7 +125,7 @@
           <h3>Promobi Technologies</h3>
           <p class="experience-role">Product Engineer Intern</p>
         </div>
-        <span class="experience-date">Jan 2023 – Jun 2023</span>
+        <span class="experience-date">Jan 2023 – May 2023</span>
       </div>
       <p class="experience-location">Pune, India</p>
       
@@ -123,86 +145,13 @@
       <h2>Projects</h2>
     </div>
     
-    <div class="projects-grid stagger">
-      <div class="project-card">
+    <div class="projects-grid stagger" id="projects-grid">
+      <div class="project-card" data-end="2026-08" data-start="2024-08">
         <div class="project-header">
-          <h3>Money Manager</h3>
-          <span class="project-badge">In Progress</span>
-        </div>
-        <p class="project-description">
-          Full-stack personal finance app — iOS client built with SwiftUI + SwiftData (MVVM) and a Go backend REST API using Chi router, JWT auth, and PostgreSQL.
-        </p>
-        <ul class="project-features">
-          <li>Expense tracking, monthly budgets, recurring bills, and group expense splitting</li>
-          <li>Offline-first sync engine with automatic retry on connectivity restore</li>
-        </ul>
-        <div class="project-tags">
-          <span class="tag">SwiftUI</span>
-          <span class="tag">SwiftData</span>
-          <span class="tag">Go</span>
-          <span class="tag">Chi</span>
-          <span class="tag">JWT</span>
-          <span class="tag">PostgreSQL</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/AN01KU/Money-Manager-iOS" target="_blank" class="project-link">iOS Client</a>
-          <a href="https://github.com/AN01KU/Money-Manager" target="_blank" class="project-link">Backend</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3>n8n Automation</h3>
-          <span class="project-badge">Personal Project</span>
-        </div>
-        <p class="project-description">
-          Deployed a self-hosted n8n workflow automation platform on Google Cloud using Docker and Ngrok.
-        </p>
-        <ul class="project-features">
-          <li>Built and actively use automated workflows including Gmail classification/labeling</li>
-          <li>Telegram-based expense tracking bot</li>
-        </ul>
-        <div class="project-tags">
-          <span class="tag">n8n</span>
-          <span class="tag">Docker</span>
-          <span class="tag">ngrok</span>
-          <span class="tag">Google Cloud</span>
-          <span class="tag">AWS EC2</span>
-          <span class="tag">Automation</span>
-        </div>
-        <div class="project-links">
-          <a href="https://n8n.ankushganesh.cloud" target="_blank" class="project-link">n8n</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Scalefusion — macOS & iOS MDM</h3>
-        </div>
-        <p class="project-description">
-          Developed macOS and iOS clients for Scalefusion, a leading enterprise MDM platform. Built system-level security, update management, and app distribution features.
-        </p>
-        <ul class="project-features">
-          <li>FileVault Encryption & Passcode Policies for enterprise security</li>
-          <li>OS Updates with Declarative Device Management (DDM)</li>
-          <li>Remote Terminal & Device Mirroring for troubleshooting</li>
-          <li>App Catalog supporting 500+ macOS applications</li>
-        </ul>
-        <div class="project-tags">
-          <span class="tag">Swift</span>
-          <span class="tag">macOS</span>
-          <span class="tag">iOS</span>
-          <span class="tag">MDM</span>
-          <span class="tag">DDM</span>
-        </div>
-        <div class="project-links">
-          <a href="https://scalefusion.com/macos-management-solution" target="_blank" class="project-link">Scalefusion macOS</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Veltar — Endpoint Security & Compliance</h3>
+          <div class="project-title-group">
+            <h3><a href="https://scalefusion.com/products/veltar" target="_blank" rel="noopener noreferrer" class="project-title-link">Veltar — Endpoint Security & Compliance</a></h3>
+            <p class="project-timeline">Aug 2024 – Aug 2026</p>
+          </div>
         </div>
         <p class="project-description">
           Built endpoint security features for Veltar, a Secure Web Gateway and Automated Compliance solution on top of Scalefusion UEM.
@@ -221,14 +170,39 @@
           <span class="tag">VPN</span>
           <span class="tag">SWG</span>
         </div>
-        <div class="project-links">
-          <a href="https://scalefusion.com/products/veltar" target="_blank" class="project-link">Veltar</a>
+      </div>
+
+      <div class="project-card" data-end="2026-08" data-start="2023-06">
+        <div class="project-header">
+          <div class="project-title-group">
+            <h3><a href="https://scalefusion.com/macos-management-solution" target="_blank" rel="noopener noreferrer" class="project-title-link">Scalefusion — macOS & iOS MDM</a></h3>
+            <p class="project-timeline">Jun 2023 – Aug 2026</p>
+          </div>
+        </div>
+        <p class="project-description">
+          Developed macOS and iOS clients for Scalefusion, a leading enterprise MDM platform. Built system-level security, update management, and app distribution features.
+        </p>
+        <ul class="project-features">
+          <li>FileVault Encryption & Passcode Policies for enterprise security</li>
+          <li>OS Updates with Declarative Device Management (DDM)</li>
+          <li>Remote Terminal & Device Mirroring for troubleshooting</li>
+          <li>App Catalog supporting 500+ macOS applications</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Swift</span>
+          <span class="tag">macOS</span>
+          <span class="tag">iOS</span>
+          <span class="tag">MDM</span>
+          <span class="tag">DDM</span>
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-end="2026-08" data-start="2023-06">
         <div class="project-header">
-          <h3>OneIdP — Zero Trust Access</h3>
+          <div class="project-title-group">
+            <h3><a href="https://scalefusion.com/products/oneidp" target="_blank" rel="noopener noreferrer" class="project-title-link">OneIdP — Zero Trust Access</a></h3>
+            <p class="project-timeline">Jun 2023 – Aug 2026</p>
+          </div>
         </div>
         <p class="project-description">
           Developed macOS features for OneIdP, a UEM-driven Zero Trust access management platform with conditional access and identity controls.
@@ -245,15 +219,40 @@
           <span class="tag">Zero Trust</span>
           <span class="tag">Authentication</span>
         </div>
-        <div class="project-links">
-          <a href="https://scalefusion.com/products/oneidp" target="_blank" class="project-link">OneIdP</a>
+      </div>
+
+      <div class="project-card" data-end="2026-04" data-start="2026-01">
+        <div class="project-header">
+          <div class="project-title-group">
+            <h3><a href="https://github.com/AN01KU/Money-Manager-iOS" target="_blank" rel="noopener noreferrer" class="project-title-link">Money Manager</a></h3>
+            <p class="project-timeline">Jan 2026 – Apr 2026</p>
+          </div>
+          <span class="project-badge">Personal</span>
+        </div>
+        <p class="project-description">
+          Full-stack personal finance app — iOS client built with SwiftUI + SwiftData (MVVM) and a Go backend REST API using Chi router, JWT auth, and PostgreSQL.
+        </p>
+        <ul class="project-features">
+          <li>Expense tracking, monthly budgets, recurring bills, and group expense splitting</li>
+          <li>Offline-first sync engine with automatic retry on connectivity restore</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">SwiftUI</span>
+          <span class="tag">SwiftData</span>
+          <span class="tag">Go</span>
+          <span class="tag">Chi</span>
+          <span class="tag">JWT</span>
+          <span class="tag">PostgreSQL</span>
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card project-card--extra" data-end="2022-11" data-start="2022-11">
         <div class="project-header">
-          <h3>VoteBlock</h3>
-          <span class="project-badge">Personal Project</span>
+          <div class="project-title-group">
+            <h3><a href="https://github.com/AN01KU/VoteBlock-app" target="_blank" rel="noopener noreferrer" class="project-title-link">VoteBlock</a></h3>
+            <p class="project-timeline">Nov 2022</p>
+          </div>
+          <span class="project-badge">Personal</span>
         </div>
         <p class="project-description">
           Developed a blockchain-based voting system to enhance security, transparency, and trust in e-voting. 
@@ -268,10 +267,13 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card project-card--extra" data-end="2022-10" data-start="2022-10">
         <div class="project-header">
-          <h3>ShareMe</h3>
-          <span class="project-badge">Personal Project</span>
+          <div class="project-title-group">
+            <h3><a href="https://github.com/AN01KU/ShareMe" target="_blank" rel="noopener noreferrer" class="project-title-link">ShareMe</a></h3>
+            <p class="project-timeline">Oct 2022</p>
+          </div>
+          <span class="project-badge">Personal</span>
         </div>
         <p class="project-description">
           Created a Pinterest clone to share, like, comment, and download images. 
@@ -283,15 +285,15 @@
           <span class="tag">Sanity</span>
           <span class="tag">Netlify</span>
         </div>
-        <div class="project-links">
-          <a href="https://sharemean01ku.netlify.app" target="_blank" class="project-link">Share me</a>
-        </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card project-card--extra" data-end="2022-07" data-start="2022-07">
         <div class="project-header">
-          <h3>Blood Bank Management Website</h3>
-          <span class="project-badge">Personal Project</span>
+          <div class="project-title-group">
+            <h3><a href="https://github.com/AN01KU/Blood-bank" target="_blank" rel="noopener noreferrer" class="project-title-link">Blood Bank Management Website</a></h3>
+            <p class="project-timeline">Jul 2022</p>
+          </div>
+          <span class="project-badge">Personal</span>
         </div>
         <p class="project-description">
           Created a website to digitize workflow of blood donation in India. Users can register for appointments, 
@@ -306,10 +308,13 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card project-card--extra" data-end="2022-07" data-start="2022-07">
         <div class="project-header">
-          <h3>Food Management Website</h3>
-          <span class="project-badge">Personal Project</span>
+          <div class="project-title-group">
+            <h3><a href="https://github.com/AN01KU/Foodbucks" target="_blank" rel="noopener noreferrer" class="project-title-link">Food Management Website</a></h3>
+            <p class="project-timeline">Jul 2022</p>
+          </div>
+          <span class="project-badge">Personal</span>
         </div>
         <p class="project-description">
           Created a website for managing food inventory for Akshay Patra NGO. Users can see nearby NGO food centres 
@@ -322,10 +327,13 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card project-card--extra" data-end="2022-02" data-start="2022-02">
         <div class="project-header">
-          <h3>Poll App</h3>
-          <span class="project-badge">Personal Project</span>
+          <div class="project-title-group">
+            <h3><a href="https://github.com/AN01KU/POLL-APP" target="_blank" rel="noopener noreferrer" class="project-title-link">Poll App</a></h3>
+            <p class="project-timeline">Feb 2022</p>
+          </div>
+          <span class="project-badge">Personal</span>
         </div>
         <p class="project-description">
           Created an Android app for users to take quick polls, quizzes and analyze responses. 
@@ -338,6 +346,101 @@
         </div>
       </div>
 
+    </div>
+
+    <div class="projects-toggle-wrap">
+      <button type="button" id="projects-toggle" class="btn btn-secondary projects-toggle" aria-expanded="false">
+        View all projects (5 more)
+      </button>
+    </div>
+  </section>
+
+  <!-- HOMELAB -->
+  <section id="homelab" class="section fade-in">
+    <div class="section-header">
+      <h2>HomeLab</h2>
+      <p class="section-subtitle">Self-hosted services I run and use daily</p>
+      <p class="homelab-notice">⚠️ Invite-only zone. If you weren't handed access personally, clicking these links will politely show you the door.</p>
+    </div>
+
+    <div class="homelab-panel">
+      <div class="homelab-terminal-bar">
+        <div class="homelab-terminal-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="homelab-terminal-title">homelab@ankushganesh.cloud — services</span>
+        <div class="homelab-bar-meta">
+          <span class="homelab-last-checked" id="homelab-last-checked">Last checked: —</span>
+          <span class="homelab-count-pill" id="homelab-count-pill">checking…</span>
+        </div>
+      </div>
+
+      <div class="homelab-grid stagger">
+        <a href="https://homeassistant.ankushganesh.cloud" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="homeassistant">
+          <div class="homelab-card-header">
+            <h3 class="homelab-name">
+              <span class="homelab-status-dot" data-status="unknown" aria-label="Status unknown"></span>
+              Home Assistant
+            </h3>
+            <span class="homelab-tag">smart home</span>
+          </div>
+          <p class="homelab-url">homeassistant.ankushganesh.cloud</p>
+          <p class="homelab-desc">Smart home automation hub for devices, scenes, and daily routines.</p>
+          <span class="homelab-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a href="https://beszel.ankushganesh.cloud" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="beszel">
+          <div class="homelab-card-header">
+            <h3 class="homelab-name">
+              <span class="homelab-status-dot" data-status="unknown" aria-label="Status unknown"></span>
+              Beszel
+            </h3>
+            <span class="homelab-tag">monitoring</span>
+          </div>
+          <p class="homelab-url">beszel.ankushganesh.cloud</p>
+          <p class="homelab-desc">Lightweight monitoring for server health, system metrics, and Docker containers.</p>
+          <span class="homelab-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a href="https://hermes.ankushganesh.cloud" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="hermes">
+          <div class="homelab-card-header">
+            <h3 class="homelab-name">
+              <span class="homelab-status-dot" data-status="unknown" aria-label="Status unknown"></span>
+              Hermes
+            </h3>
+            <span class="homelab-tag">gateway</span>
+          </div>
+          <p class="homelab-url">hermes.ankushganesh.cloud</p>
+          <p class="homelab-desc">Internal homelab gateway for service routing and utility integrations.</p>
+          <span class="homelab-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a href="https://pihole.ankushganesh.cloud/admin/login" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="pihole">
+          <div class="homelab-card-header">
+            <h3 class="homelab-name">
+              <span class="homelab-status-dot" data-status="unknown" aria-label="Status unknown"></span>
+              Pi-hole
+            </h3>
+            <span class="homelab-tag">network</span>
+          </div>
+          <p class="homelab-url">pihole.ankushganesh.cloud</p>
+          <p class="homelab-desc">Network-wide DNS filtering and ad blocking across all home devices.</p>
+          <span class="homelab-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a href="https://n8n.ankushganesh.cloud" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="n8n">
+          <div class="homelab-card-header">
+            <h3 class="homelab-name">
+              <span class="homelab-status-dot" data-status="unknown" aria-label="Status unknown"></span>
+              n8n
+            </h3>
+            <span class="homelab-tag">automation</span>
+          </div>
+          <p class="homelab-url">n8n.ankushganesh.cloud</p>
+          <p class="homelab-desc">Workflow automation for Gmail labeling, Telegram bots, and daily task integrations.</p>
+          <span class="homelab-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -399,7 +502,7 @@
     <div class="publication-item">
       <h3>
         <a href="https://www.mdpi.com/2571-5577/6/4/70" target="_blank" class="publication-link">
-          Secure Voting Website Using Ethereum and Smart Contracts
+          Secure Voting Using Ethereum & Smart Contracts
         </a>
       </h3>
       <p class="publication-description">
@@ -434,37 +537,49 @@
       </div>
 
       <div class="skill-category">
-        <h3>Frameworks & Technologies</h3>
+        <h3>Apple Frameworks</h3>
         <div class="skill-tags">
+          <span class="skill-tag">SwiftUI</span>
           <span class="skill-tag">UIKit</span>
           <span class="skill-tag">Cocoa</span>
-          <span class="skill-tag">SwiftUI</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">Realm</span>
-          <span class="skill-tag">CI/CD Pipelines</span>
-          <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">Swift Data</span>
-          <span class="skill-tag">Swift Testing</span>
+          <span class="skill-tag">SwiftData</span>
           <span class="skill-tag">Endpoint Security</span>
-          <span class="skill-tag">VPN & Content Filtering</span>
-  
+          <span class="skill-tag">WKWebView</span>
         </div>
       </div>
 
       <div class="skill-category">
-        <h3>Developer Tools</h3>
+        <h3>Security</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Data Loss Prevention (DLP)</span>
+          <span class="skill-tag">Data Security Posture Management (DSPM)</span>
+          <span class="skill-tag">Endpoint Security</span>
+          <span class="skill-tag">Enterprise Data Security</span>
+          <span class="skill-tag">VPN & Content Filtering</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Backend & Infra</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Go</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">Bash</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Tools</h3>
         <div class="skill-tags">
           <span class="skill-tag">Xcode</span>
-          <span class="skill-tag">Xcode Instruments</span>
           <span class="skill-tag">Git</span>
           <span class="skill-tag">JIRA</span>
           <span class="skill-tag">Postman</span>
           <span class="skill-tag">TestFlight</span>
           <span class="skill-tag">GitLab CI</span>
-          <span class="skill-tag">Github Actions</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">Bash Scripting</span>
-          <span class="skill-tag">Ngrok</span>
         </div>
       </div>
 
@@ -586,6 +701,93 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in, .stagger').forEach(el => observer.observe(el));
+
+    // Projects sort & toggle
+    (function initProjects() {
+      const grid = document.getElementById('projects-grid');
+      const toggle = document.getElementById('projects-toggle');
+      const toggleWrap = document.querySelector('.projects-toggle-wrap');
+      if (!grid) return;
+
+      const cards = [...grid.querySelectorAll('.project-card')];
+      cards.sort((a, b) => {
+        const endDiff = b.dataset.end.localeCompare(a.dataset.end);
+        if (endDiff !== 0) return endDiff;
+        return (b.dataset.start || '').localeCompare(a.dataset.start || '');
+      });
+      cards.forEach(card => grid.appendChild(card));
+
+      const extraCards = grid.querySelectorAll('.project-card--extra');
+      const extraCount = extraCards.length;
+
+      if (!toggle || extraCount === 0) {
+        toggleWrap?.classList.add('is-hidden');
+        return;
+      }
+
+      const setExpanded = (expanded) => {
+        grid.classList.toggle('is-expanded', expanded);
+        toggle.setAttribute('aria-expanded', String(expanded));
+        toggle.textContent = expanded ? 'Show fewer' : `View all projects (${extraCount} more)`;
+      };
+
+      toggle.addEventListener('click', () => {
+        setExpanded(!grid.classList.contains('is-expanded'));
+      });
+    })();
+
+    // Homelab status
+    async function loadHomelabStatus() {
+      const pill = document.getElementById('homelab-count-pill');
+      const lastChecked = document.getElementById('homelab-last-checked');
+
+      try {
+        const response = await fetch(`resources/homelab-status.json?ts=${Date.now()}`);
+        if (!response.ok) throw new Error('Status file unavailable');
+
+        const data = await response.json();
+        const services = data.services || {};
+        const entries = Object.entries(services);
+        let onlineCount = 0;
+
+        entries.forEach(([id, service]) => {
+          const card = document.querySelector(`.homelab-card[data-service="${id}"]`);
+          if (!card) return;
+
+          const dot = card.querySelector('.homelab-status-dot');
+          if (!dot) return;
+
+          const status = service.status || 'unknown';
+          dot.dataset.status = status;
+          dot.setAttribute('aria-label', `Status: ${status}`);
+
+          if (status === 'online') onlineCount += 1;
+        });
+
+        if (pill) {
+          pill.textContent = `${onlineCount}/${entries.length} online`;
+          pill.classList.add('is-live');
+        }
+
+        if (lastChecked) {
+          if (data.updatedAt) {
+            const checkedDate = new Date(data.updatedAt);
+            lastChecked.textContent = `Last checked: ${checkedDate.toLocaleString(undefined, {
+              dateStyle: 'medium',
+              timeStyle: 'short'
+            })}`;
+          } else {
+            lastChecked.textContent = 'Last checked: —';
+          }
+        }
+      } catch (error) {
+        if (pill) pill.textContent = 'status unavailable';
+        if (lastChecked) lastChecked.textContent = 'Last checked: unavailable';
+        console.warn('Homelab status unavailable:', error);
+      }
+    }
+
+    loadHomelabStatus();
 
     // Setup images code (commented out - uncomment when setup section is enabled)
     /*

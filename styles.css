@@ -373,6 +373,18 @@ body {
   margin-bottom: 0.25rem;
 }
 
+.experience-company-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.experience-company-link:hover {
+  color: var(--text);
+  border-bottom-color: var(--border);
+}
+
 .experience-role {
   font-family: var(--mono);
   font-size: 0.9rem;
@@ -476,12 +488,35 @@ body {
   border-color: var(--accent);
 }
 
+.project-card--extra {
+  display: none;
+}
+
+.projects-grid.is-expanded .project-card--extra {
+  display: flex;
+}
+
+.projects-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.projects-toggle-wrap.is-hidden {
+  display: none;
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 0.75rem;
   gap: 0.75rem;
+}
+
+.project-title-group {
+  flex: 1;
+  min-width: 0;
 }
 
 .project-header h3 {
@@ -495,6 +530,22 @@ body {
 }
 
 .project-card:hover .project-header h3 {
+  color: var(--accent);
+}
+
+.project-title-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.project-title-link:hover {
+  color: inherit;
+  border-bottom-color: var(--border);
+}
+
+.project-card:hover .project-header h3 .project-title-link {
   color: var(--accent);
 }
 
@@ -560,8 +611,8 @@ body {
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 0.75rem;
 }
 
 .project-link {
@@ -578,6 +629,254 @@ body {
 .project-link:hover {
   background: var(--accent);
   color: var(--bg);
+}
+
+.project-timeline {
+  margin: 0.25rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* HOMELAB */
+.homelab-notice {
+  margin-top: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  background: var(--bg-secondary);
+}
+
+.homelab-panel {
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.homelab-terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px dashed var(--border);
+  background: var(--bg);
+  flex-wrap: wrap;
+}
+
+.homelab-terminal-dots {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.homelab-terminal-dots span {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.homelab-terminal-dots span:first-child {
+  border-color: #e05252;
+  background: rgba(224, 82, 82, 0.15);
+}
+
+.homelab-terminal-dots span:nth-child(2) {
+  border-color: #d4a72c;
+  background: rgba(212, 167, 44, 0.15);
+}
+
+.homelab-terminal-dots span:nth-child(3) {
+  border-color: var(--accent);
+  background: rgba(0, 217, 126, 0.1);
+}
+
+.homelab-terminal-title {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.homelab-bar-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  margin-left: auto;
+}
+
+.homelab-last-checked {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.homelab-count-pill {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  padding: 0.15rem 0.5rem;
+  white-space: nowrap;
+}
+
+.homelab-count-pill.is-live {
+  color: var(--accent);
+  border-color: var(--accent);
+  border-style: solid;
+}
+
+.homelab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+
+.homelab-card {
+  position: relative;
+  display: block;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 1rem 1.1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.homelab-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s ease;
+}
+
+.homelab-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.homelab-card:hover::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.homelab-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.homelab-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  padding: 0.1rem 0.4rem;
+  text-transform: lowercase;
+  flex-shrink: 0;
+}
+
+.homelab-card:hover .homelab-tag {
+  border-color: var(--accent);
+  color: var(--accent);
+  border-style: solid;
+}
+
+.homelab-name {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.homelab-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--text-muted);
+  opacity: 0.35;
+  transition: background 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.homelab-status-dot[data-status="online"] {
+  background: var(--accent);
+  opacity: 1;
+  box-shadow: 0 0 6px rgba(0, 217, 126, 0.4);
+}
+
+[data-theme="light"] .homelab-status-dot[data-status="online"] {
+  box-shadow: 0 0 6px rgba(22, 163, 74, 0.35);
+}
+
+.homelab-status-dot[data-status="offline"] {
+  background: #e05252;
+  opacity: 1;
+  box-shadow: none;
+}
+
+.homelab-status-dot[data-status="unknown"] {
+  background: var(--text-muted);
+  opacity: 0.35;
+}
+
+.homelab-card:hover .homelab-name {
+  color: var(--accent);
+}
+
+.homelab-url {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.homelab-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+  padding-right: 1.25rem;
+}
+
+.homelab-arrow {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--border);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.homelab-card:hover .homelab-arrow {
+  color: var(--accent);
+  transform: translateX(3px);
 }
 
 /* SKILLS */
