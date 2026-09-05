@@ -364,6 +364,7 @@
         <span class="footer-separator">•</span>
         <a href="#" class="footer-contact-link" id="footer-phone">…</a>
       </div>
+      <p class="footer-last-updated" id="site-last-updated"></p>
       <!-- <p class="footer-copyright">© 2025 Ankush Ganesh. All rights reserved.</p> -->
     </div>
   </footer>
@@ -537,7 +538,7 @@
         const response = await fetch(`resources/site-config.json?ts=${Date.now()}`);
         if (!response.ok) return;
 
-        const { profile, social } = await response.json();
+        const { profile, social, updatedAt } = await response.json();
 
         const heroName = document.getElementById('hero-name');
         const heroDescription = document.getElementById('hero-description');
@@ -609,6 +610,15 @@
         if (profile?.phone && footerPhone) {
           footerPhone.href = `tel:${profile.phone}`;
           footerPhone.textContent = profile.phoneDisplay || profile.phone;
+        }
+
+        const siteLastUpdated = document.getElementById('site-last-updated');
+        if (updatedAt && siteLastUpdated) {
+          const updatedDate = new Date(updatedAt);
+          siteLastUpdated.textContent = `Last updated: ${updatedDate.toLocaleString(undefined, {
+            dateStyle: 'medium',
+            timeStyle: 'short'
+          })}`;
         }
       } catch (error) {
         console.warn('Site config unavailable:', error);

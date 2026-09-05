@@ -1405,6 +1405,12 @@ body {
   margin-top: 1.5rem;
 }
 
+.footer-last-updated {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 1.25rem;
+}
+
 /* ANIMATIONS */
 .fade-in {
   opacity: 0;

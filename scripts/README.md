@@ -6,7 +6,7 @@ JSON under `resources/` is **not committed** to this repo. CI checks out private
 
 | File | Source |
 |------|--------|
-| `site-config.json` | `profile.env` + `social.env` |
+| `site-config.json` | `profile.env` + `social.env` (includes `updatedAt` for footer) |
 | `projects.json` | `data/projects.json` + portfolio filter (`platforms.portfolio`) |
 | `publications.json` | `data/publications.json` |
 | `education.json` | `data/education.json` |
@@ -33,10 +33,13 @@ Requires `bash` and `jq`.
 1. **Pages source**: Settings → Pages → Build and deployment → **GitHub Actions**
 2. **Secret** `SHARED_CONFIG_TOKEN`: fine-grained PAT with **Contents: Read** on `shared-config`
 
-## Deploy triggers
+## Deploy schedules
 
-- Push to `main` (site HTML/CSS changes)
-- Every 12 hours (homelab status refresh + redeploy)
-- Manual `workflow_dispatch`
+| Workflow | Schedule | Purpose |
+|----------|----------|---------|
+| **Deploy Site** | Every 12 hours, push to `main`, manual | Full site redeploy |
+| **Refresh Homelab Status** | Every 5 hours, manual | Homelab health checks + redeploy |
 
-After a `shared-config` change, re-run **Deploy Site** manually or wait for the next scheduled run (every 12 hours).
+Both workflows rebuild all JSON and publish to GitHub Pages. Footer **Last updated** comes from `site-config.json` → `updatedAt`, set at build time.
+
+After a `shared-config` change, re-run **Deploy Site** manually.
