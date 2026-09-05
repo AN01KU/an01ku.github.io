@@ -1,40 +1,40 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-09-05T06:03:00Z",
   "services": {
     "homeassistant": {
       "name": "Home Assistant",
       "url": "https://homeassistant.ankushganesh.cloud",
-      "status": "unknown",
-      "httpCode": 0,
-      "checkedAt": null
+      "status": "online",
+      "httpCode": 403,
+      "checkedAt": "2026-09-05T06:03:00Z"
     },
     "beszel": {
       "name": "Beszel",
       "url": "https://beszel.ankushganesh.cloud",
-      "status": "unknown",
-      "httpCode": 0,
-      "checkedAt": null
+      "status": "online",
+      "httpCode": 403,
+      "checkedAt": "2026-09-05T06:03:00Z"
     },
     "hermes": {
       "name": "Hermes",
       "url": "https://hermes.ankushganesh.cloud",
-      "status": "unknown",
-      "httpCode": 0,
-      "checkedAt": null
+      "status": "online",
+      "httpCode": 403,
+      "checkedAt": "2026-09-05T06:03:00Z"
     },
     "pihole": {
       "name": "Pi-hole",
       "url": "https://pihole.ankushganesh.cloud/admin/login",
-      "status": "unknown",
-      "httpCode": 0,
-      "checkedAt": null
+      "status": "online",
+      "httpCode": 403,
+      "checkedAt": "2026-09-05T06:03:00Z"
     },
     "n8n": {
       "name": "n8n",
       "url": "https://n8n.ankushganesh.cloud",
-      "status": "unknown",
-      "httpCode": 0,
-      "checkedAt": null
+      "status": "online",
+      "httpCode": 403,
+      "checkedAt": "2026-09-05T06:03:00Z"
     }
   }
 }
