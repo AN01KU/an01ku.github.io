@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="page-title">Ankush Ganesh — Software Engineer</title>
+  <meta name="description" id="meta-description" content="" />
+  <title id="page-title">Portfolio</title>
+  <link rel="canonical" id="canonical-link" href="" />
   <link rel="icon" type="image/svg+xml" href="resources/favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -32,14 +34,14 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Hi, I'm <span class="highlight" id="hero-name">Ankush Ganesh</span></h1>
-      <p class="hero-subtitle" id="hero-subtitle">Software Engineer @ Cyberhaven</p>
+      <h1>Hi, I'm <span class="highlight" id="hero-name">…</span></h1>
+      <p class="hero-subtitle" id="hero-subtitle">…</p>
       <p class="hero-description" id="hero-description" hidden></p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View Work</a>
-        <a href="https://github.com/AN01KU" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-github">GitHub</a>
-        <a href="https://www.linkedin.com/in/an01ku/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-linkedin">LinkedIn</a>
-        <a href="https://leetcode.com/u/AN01KU/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-leetcode">LeetCode</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-github">GitHub</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-linkedin">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-leetcode">LeetCode</a>
       </div>
     </div>
   </section>
@@ -70,12 +72,12 @@
     <div class="experience-item">
       <div class="experience-header">
         <div>
-          <h3><a href="https://www.cyberhaven.com" target="_blank" rel="noopener noreferrer" class="experience-company-link" id="current-company-link"><span id="current-company-name">Cyberhaven</span></a></h3>
-          <p class="experience-role" id="current-role">Software Engineer</p>
+          <h3><a href="#" target="_blank" rel="noopener noreferrer" class="experience-company-link" id="current-company-link"><span id="current-company-name">…</span></a></h3>
+          <p class="experience-role" id="current-role">…</p>
         </div>
         <span class="experience-date">Aug 2026 – Present</span>
       </div>
-      <p class="experience-location" id="current-location">Bangalore, India · Hybrid</p>
+      <p class="experience-location" id="current-location">…</p>
 
       <div class="experience-project">
         <p class="project-description">
@@ -347,20 +349,20 @@
       <h2>Get in Touch</h2>
       <p>I'm always open to discussing new opportunities and interesting projects.</p>
       <div class="footer-links">
-        <a href="https://github.com/AN01KU" target="_blank" rel="noopener noreferrer" class="footer-link" id="footer-github">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="footer-link" id="footer-github">
           <span>GitHub</span>
         </a>
-        <a href="https://www.linkedin.com/in/an01ku/" target="_blank" rel="noopener noreferrer" class="footer-link" id="footer-linkedin">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="footer-link" id="footer-linkedin">
           <span>LinkedIn</span>
         </a>
-        <a href="https://leetcode.com/u/AN01KU/" target="_blank" rel="noopener noreferrer" class="footer-link" id="footer-leetcode">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="footer-link" id="footer-leetcode">
           <span>LeetCode</span>
         </a>
       </div>
       <div class="footer-contact-info">
-        <a href="mailto:ankush.ganesh@outlook.com" class="footer-contact-link" id="footer-email">ankush.ganesh@outlook.com</a>
+        <a href="#" class="footer-contact-link" id="footer-email">…</a>
         <span class="footer-separator">•</span>
-        <a href="tel:+916301598117" class="footer-contact-link" id="footer-phone">+91-6301598117</a>
+        <a href="#" class="footer-contact-link" id="footer-phone">…</a>
       </div>
       <!-- <p class="footer-copyright">© 2025 Ankush Ganesh. All rights reserved.</p> -->
     </div>
@@ -512,6 +514,23 @@
       }
     }
 
+    function renderHeroSubtitle(profile) {
+      const heroSubtitle = document.getElementById('hero-subtitle');
+      if (!heroSubtitle || !profile?.title) return;
+
+      if (profile.company && profile.companyUrl) {
+        heroSubtitle.innerHTML = `${escapeHtml(profile.title)} @ <a href="${escapeHtml(profile.companyUrl)}" target="_blank" rel="noopener noreferrer" class="hero-company-link">${escapeHtml(profile.company)}</a>`;
+        return;
+      }
+
+      if (profile.company) {
+        heroSubtitle.textContent = `${profile.title} @ ${profile.company}`;
+        return;
+      }
+
+      heroSubtitle.textContent = profile.title;
+    }
+
     // Site config (profile + social from shared-config)
     async function loadSiteConfig() {
       try {
@@ -521,15 +540,10 @@
         const { profile, social } = await response.json();
 
         const heroName = document.getElementById('hero-name');
-        const heroSubtitle = document.getElementById('hero-subtitle');
         const heroDescription = document.getElementById('hero-description');
 
         if (profile?.fullName && heroName) heroName.textContent = profile.fullName;
-        if (profile?.title && profile?.company && heroSubtitle) {
-          heroSubtitle.textContent = `${profile.title} @ ${profile.company}`;
-        } else if (profile?.title && heroSubtitle) {
-          heroSubtitle.textContent = profile.title;
-        }
+        renderHeroSubtitle(profile);
 
         if (profile?.tagline && heroDescription) {
           heroDescription.textContent = profile.tagline;
@@ -540,6 +554,17 @@
 
         if (profile?.fullName && profile?.title) {
           document.title = `${profile.fullName} — ${profile.title}`;
+        }
+
+        const metaDescription = document.getElementById('meta-description');
+        if (metaDescription) {
+          const parts = [profile?.title, profile?.company, profile?.location].filter(Boolean);
+          if (parts.length) metaDescription.content = parts.join(' · ');
+        }
+
+        const canonicalLink = document.getElementById('canonical-link');
+        if (social?.portfolioUrl && canonicalLink) {
+          canonicalLink.href = social.portfolioUrl;
         }
 
         const currentCompanyLink = document.getElementById('current-company-link');
