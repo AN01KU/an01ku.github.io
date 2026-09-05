@@ -38,7 +38,7 @@ Requires `bash` and `jq`.
 | Workflow | Schedule | Purpose |
 |----------|----------|---------|
 | **Deploy Site** | Every 12 hours, push to `main`, manual | Full site redeploy |
-| **Refresh Homelab Status** | Every 5 hours, manual | Homelab health checks + redeploy |
+| **Refresh Homelab Status** | Every hour, manual | Homelab health checks + redeploy |
 
 Both workflows rebuild all JSON and publish to GitHub Pages. Footer **Last updated** comes from `site-config.json` → `updatedAt`, set at build time.
 
