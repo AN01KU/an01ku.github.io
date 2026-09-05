@@ -1249,6 +1249,12 @@ body {
   font-size: 0.95rem;
 }
 
+.publication-meta {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
 .publication-tags {
   display: flex;
   flex-wrap: wrap;

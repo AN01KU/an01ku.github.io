@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ankush Ganesh — Software Engineer</title>
+  <title id="page-title">Ankush Ganesh — Software Engineer</title>
   <link rel="icon" type="image/svg+xml" href="resources/favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -32,17 +32,14 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Hi, I'm <span class="highlight">Ankush Ganesh</span></h1>
-      <p class="hero-subtitle">Software Engineer · Apple Platform Specialist</p>
-      <p class="hero-description">
-        Building secure, scalable systems on Apple platforms for enterprise security — endpoint visibility, 
-        data loss prevention, and sensitive data protection across macOS sensors, DLP, and DSPM.
-      </p>
+      <h1>Hi, I'm <span class="highlight" id="hero-name">Ankush Ganesh</span></h1>
+      <p class="hero-subtitle" id="hero-subtitle">Software Engineer @ Cyberhaven</p>
+      <p class="hero-description" id="hero-description" hidden></p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View Work</a>
-        <a href="https://github.com/AN01KU" target="_blank" class="btn btn-secondary">GitHub</a>
-        <a href="https://www.linkedin.com/in/an01ku/" target="_blank" class="btn btn-secondary">LinkedIn</a>
-        <a href="https://leetcode.com/u/AN01KU/" target="_blank" class="btn btn-secondary">LeetCode</a>
+        <a href="https://github.com/AN01KU" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-github">GitHub</a>
+        <a href="https://www.linkedin.com/in/an01ku/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-linkedin">LinkedIn</a>
+        <a href="https://leetcode.com/u/AN01KU/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-leetcode">LeetCode</a>
       </div>
     </div>
   </section>
@@ -73,12 +70,12 @@
     <div class="experience-item">
       <div class="experience-header">
         <div>
-          <h3><a href="https://www.cyberhaven.com" target="_blank" rel="noopener noreferrer" class="experience-company-link">Cyberhaven</a></h3>
-          <p class="experience-role">Software Engineer</p>
+          <h3><a href="https://www.cyberhaven.com" target="_blank" rel="noopener noreferrer" class="experience-company-link" id="current-company-link"><span id="current-company-name">Cyberhaven</span></a></h3>
+          <p class="experience-role" id="current-role">Software Engineer</p>
         </div>
         <span class="experience-date">Aug 2026 – Present</span>
       </div>
-      <p class="experience-location">Bangalore, India · Hybrid</p>
+      <p class="experience-location" id="current-location">Bangalore, India · Hybrid</p>
 
       <div class="experience-project">
         <p class="project-description">
@@ -145,212 +142,11 @@
       <h2>Projects</h2>
     </div>
     
-    <div class="projects-grid stagger" id="projects-grid">
-      <div class="project-card" data-end="2026-08" data-start="2024-08">
-        <div class="project-header">
-          <div class="project-title-group">
-            <h3><a href="https://scalefusion.com/products/veltar" target="_blank" rel="noopener noreferrer" class="project-title-link">Veltar — Endpoint Security & Compliance</a></h3>
-            <p class="project-timeline">Aug 2024 – Aug 2026</p>
-          </div>
-        </div>
-        <p class="project-description">
-          Built endpoint security features for Veltar, a Secure Web Gateway and Automated Compliance solution on top of Scalefusion UEM.
-        </p>
-        <ul class="project-features">
-          <li>Automated Compliance with CIS benchmark enforcement</li>
-          <li>Secure Web Gateway (SWG) with on-device web filtering</li>
-          <li>VPN tunnel for secure corporate resource access</li>
-          <li>App Control for macOS using Endpoint Security Framework</li>
-          <li>IO Device Access Control (DAC) for USB/peripheral management</li>
-        </ul>
-        <div class="project-tags">
-          <span class="tag">Swift</span>
-          <span class="tag">macOS</span>
-          <span class="tag">Endpoint Security</span>
-          <span class="tag">VPN</span>
-          <span class="tag">SWG</span>
-        </div>
-      </div>
-
-      <div class="project-card" data-end="2026-08" data-start="2023-06">
-        <div class="project-header">
-          <div class="project-title-group">
-            <h3><a href="https://scalefusion.com/macos-management-solution" target="_blank" rel="noopener noreferrer" class="project-title-link">Scalefusion — macOS & iOS MDM</a></h3>
-            <p class="project-timeline">Jun 2023 – Aug 2026</p>
-          </div>
-        </div>
-        <p class="project-description">
-          Developed macOS and iOS clients for Scalefusion, a leading enterprise MDM platform. Built system-level security, update management, and app distribution features.
-        </p>
-        <ul class="project-features">
-          <li>FileVault Encryption & Passcode Policies for enterprise security</li>
-          <li>OS Updates with Declarative Device Management (DDM)</li>
-          <li>Remote Terminal & Device Mirroring for troubleshooting</li>
-          <li>App Catalog supporting 500+ macOS applications</li>
-        </ul>
-        <div class="project-tags">
-          <span class="tag">Swift</span>
-          <span class="tag">macOS</span>
-          <span class="tag">iOS</span>
-          <span class="tag">MDM</span>
-          <span class="tag">DDM</span>
-        </div>
-      </div>
-
-      <div class="project-card" data-end="2026-08" data-start="2023-06">
-        <div class="project-header">
-          <div class="project-title-group">
-            <h3><a href="https://scalefusion.com/products/oneidp" target="_blank" rel="noopener noreferrer" class="project-title-link">OneIdP — Zero Trust Access</a></h3>
-            <p class="project-timeline">Jun 2023 – Aug 2026</p>
-          </div>
-        </div>
-        <p class="project-description">
-          Developed macOS features for OneIdP, a UEM-driven Zero Trust access management platform with conditional access and identity controls.
-        </p>
-        <ul class="project-features">
-          <li>Custom macOS Login Window with location, network & time-based auth</li>
-          <li>Just-in-Time Admin with temporary privilege elevation & audit logs</li>
-          <li>LAPS — Local Admin Password Solution with automated rotation</li>
-        </ul>
-        <div class="project-tags">
-          <span class="tag">Swift</span>
-          <span class="tag">macOS</span>
-          <span class="tag">IAM</span>
-          <span class="tag">Zero Trust</span>
-          <span class="tag">Authentication</span>
-        </div>
-      </div>
-
-      <div class="project-card" data-end="2026-04" data-start="2026-01">
-        <div class="project-header">
-          <div class="project-title-group">
-            <h3><a href="https://github.com/AN01KU/Money-Manager-iOS" target="_blank" rel="noopener noreferrer" class="project-title-link">Money Manager</a></h3>
-            <p class="project-timeline">Jan 2026 – Apr 2026</p>
-          </div>
-          <span class="project-badge">Personal</span>
-        </div>
-        <p class="project-description">
-          Full-stack personal finance app — iOS client built with SwiftUI + SwiftData (MVVM) and a Go backend REST API using Chi router, JWT auth, and PostgreSQL.
-        </p>
-        <ul class="project-features">
-          <li>Expense tracking, monthly budgets, recurring bills, and group expense splitting</li>
-          <li>Offline-first sync engine with automatic retry on connectivity restore</li>
-        </ul>
-        <div class="project-tags">
-          <span class="tag">SwiftUI</span>
-          <span class="tag">SwiftData</span>
-          <span class="tag">Go</span>
-          <span class="tag">Chi</span>
-          <span class="tag">JWT</span>
-          <span class="tag">PostgreSQL</span>
-        </div>
-      </div>
-
-      <div class="project-card project-card--extra" data-end="2022-11" data-start="2022-11">
-        <div class="project-header">
-          <div class="project-title-group">
-            <h3><a href="https://github.com/AN01KU/VoteBlock-app" target="_blank" rel="noopener noreferrer" class="project-title-link">VoteBlock</a></h3>
-            <p class="project-timeline">Nov 2022</p>
-          </div>
-          <span class="project-badge">Personal</span>
-        </div>
-        <p class="project-description">
-          Developed a blockchain-based voting system to enhance security, transparency, and trust in e-voting. 
-          Designed a decentralized ledger and a secure, user-friendly interface.
-        </p>
-        <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">Solidity</span>
-          <span class="tag">Firebase</span>
-          <span class="tag">TailwindCSS</span>
-          <span class="tag">Blockchain</span>
-        </div>
-      </div>
-
-      <div class="project-card project-card--extra" data-end="2022-10" data-start="2022-10">
-        <div class="project-header">
-          <div class="project-title-group">
-            <h3><a href="https://github.com/AN01KU/ShareMe" target="_blank" rel="noopener noreferrer" class="project-title-link">ShareMe</a></h3>
-            <p class="project-timeline">Oct 2022</p>
-          </div>
-          <span class="project-badge">Personal</span>
-        </div>
-        <p class="project-description">
-          Created a Pinterest clone to share, like, comment, and download images. 
-          Deployed using Netlify with ReactJS, Tailwind, Sanity, and Google Identity Service.
-        </p>
-        <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">Tailwind</span>
-          <span class="tag">Sanity</span>
-          <span class="tag">Netlify</span>
-        </div>
-      </div>
-
-      <div class="project-card project-card--extra" data-end="2022-07" data-start="2022-07">
-        <div class="project-header">
-          <div class="project-title-group">
-            <h3><a href="https://github.com/AN01KU/Blood-bank" target="_blank" rel="noopener noreferrer" class="project-title-link">Blood Bank Management Website</a></h3>
-            <p class="project-timeline">Jul 2022</p>
-          </div>
-          <span class="project-badge">Personal</span>
-        </div>
-        <p class="project-description">
-          Created a website to digitize workflow of blood donation in India. Users can register for appointments, 
-          and locate nearby donors and blood banks.
-        </p>
-        <div class="project-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">CSS</span>
-          <span class="tag">NodeJS</span>
-          <span class="tag">Firebase</span>
-        </div>
-      </div>
-
-      <div class="project-card project-card--extra" data-end="2022-07" data-start="2022-07">
-        <div class="project-header">
-          <div class="project-title-group">
-            <h3><a href="https://github.com/AN01KU/Foodbucks" target="_blank" rel="noopener noreferrer" class="project-title-link">Food Management Website</a></h3>
-            <p class="project-timeline">Jul 2022</p>
-          </div>
-          <span class="project-badge">Personal</span>
-        </div>
-        <p class="project-description">
-          Created a website for managing food inventory for Akshay Patra NGO. Users can see nearby NGO food centres 
-          and admins can view food inventory details.
-        </p>
-        <div class="project-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">NodeJS</span>
-        </div>
-      </div>
-
-      <div class="project-card project-card--extra" data-end="2022-02" data-start="2022-02">
-        <div class="project-header">
-          <div class="project-title-group">
-            <h3><a href="https://github.com/AN01KU/POLL-APP" target="_blank" rel="noopener noreferrer" class="project-title-link">Poll App</a></h3>
-            <p class="project-timeline">Feb 2022</p>
-          </div>
-          <span class="project-badge">Personal</span>
-        </div>
-        <p class="project-description">
-          Created an Android app for users to take quick polls, quizzes and analyze responses. 
-          Developed using Java and Firebase.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Java</span>
-          <span class="tag">Android</span>
-          <span class="tag">Firebase</span>
-        </div>
-      </div>
-
-    </div>
+    <div class="projects-grid stagger" id="projects-grid"></div>
 
     <div class="projects-toggle-wrap">
-      <button type="button" id="projects-toggle" class="btn btn-secondary projects-toggle" aria-expanded="false">
-        View all projects (5 more)
+      <button type="button" id="projects-toggle" class="btn btn-secondary projects-toggle" aria-expanded="false" hidden>
+        View all projects
       </button>
     </div>
   </section>
@@ -368,79 +164,14 @@
         <div class="homelab-terminal-dots" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>
-        <span class="homelab-terminal-title">homelab@ankushganesh.cloud — services</span>
+        <span class="homelab-terminal-title" id="homelab-terminal-title">homelab@ankushganesh.cloud — services</span>
         <div class="homelab-bar-meta">
           <span class="homelab-last-checked" id="homelab-last-checked">Last checked: —</span>
           <span class="homelab-count-pill" id="homelab-count-pill">checking…</span>
         </div>
       </div>
 
-      <div class="homelab-grid stagger">
-        <a href="https://homeassistant.ankushganesh.cloud" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="homeassistant">
-          <div class="homelab-card-header">
-            <h3 class="homelab-name">
-              <span class="homelab-status-dot" data-status="unknown" aria-label="Status unknown"></span>
-              Home Assistant
-            </h3>
-            <span class="homelab-tag">smart home</span>
-          </div>
-          <p class="homelab-url">homeassistant.ankushganesh.cloud</p>
-          <p class="homelab-desc">Smart home automation hub for devices, scenes, and daily routines.</p>
-          <span class="homelab-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <a href="https://beszel.ankushganesh.cloud" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="beszel">
-          <div class="homelab-card-header">
-            <h3 class="homelab-name">
-              <span class="homelab-status-dot" data-status="unknown" aria-label="Status unknown"></span>
-              Beszel
-            </h3>
-            <span class="homelab-tag">monitoring</span>
-          </div>
-          <p class="homelab-url">beszel.ankushganesh.cloud</p>
-          <p class="homelab-desc">Lightweight monitoring for server health, system metrics, and Docker containers.</p>
-          <span class="homelab-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <a href="https://hermes.ankushganesh.cloud" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="hermes">
-          <div class="homelab-card-header">
-            <h3 class="homelab-name">
-              <span class="homelab-status-dot" data-status="unknown" aria-label="Status unknown"></span>
-              Hermes
-            </h3>
-            <span class="homelab-tag">gateway</span>
-          </div>
-          <p class="homelab-url">hermes.ankushganesh.cloud</p>
-          <p class="homelab-desc">Internal homelab gateway for service routing and utility integrations.</p>
-          <span class="homelab-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <a href="https://pihole.ankushganesh.cloud/admin/login" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="pihole">
-          <div class="homelab-card-header">
-            <h3 class="homelab-name">
-              <span class="homelab-status-dot" data-status="unknown" aria-label="Status unknown"></span>
-              Pi-hole
-            </h3>
-            <span class="homelab-tag">network</span>
-          </div>
-          <p class="homelab-url">pihole.ankushganesh.cloud</p>
-          <p class="homelab-desc">Network-wide DNS filtering and ad blocking across all home devices.</p>
-          <span class="homelab-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <a href="https://n8n.ankushganesh.cloud" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="n8n">
-          <div class="homelab-card-header">
-            <h3 class="homelab-name">
-              <span class="homelab-status-dot" data-status="unknown" aria-label="Status unknown"></span>
-              n8n
-            </h3>
-            <span class="homelab-tag">automation</span>
-          </div>
-          <p class="homelab-url">n8n.ankushganesh.cloud</p>
-          <p class="homelab-desc">Workflow automation for Gmail labeling, Telegram bots, and daily task integrations.</p>
-          <span class="homelab-arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
+      <div class="homelab-grid stagger" id="homelab-grid"></div>
     </div>
   </section>
 
@@ -499,23 +230,7 @@
       <h2>Publications</h2>
     </div>
     
-    <div class="publication-item">
-      <h3>
-        <a href="https://www.mdpi.com/2571-5577/6/4/70" target="_blank" class="publication-link">
-          Secure Voting Using Ethereum & Smart Contracts
-        </a>
-      </h3>
-      <p class="publication-description">
-        Researched and proposed a blockchain-based voting model to enhance the accessibility, security, 
-        and efficiency of the voting system. Published in MDPI.
-      </p>
-      <div class="publication-tags">
-        <span class="tag">Blockchain</span>
-        <span class="tag">Ethereum</span>
-        <span class="tag">Smart Contracts</span>
-        <span class="tag">Research</span>
-      </div>
-    </div>
+    <div id="publications-list"></div>
   </section>
 
   <!-- SKILLS -->
@@ -613,33 +328,17 @@
   <section id="certifications" class="section fade-in">
     <div class="section-header">
       <h2>Certifications</h2>
-      <p class="section-subtitle">In progess 🧑🏻‍💻</p>
+      <p class="section-subtitle" id="certifications-subtitle">In progess 🧑🏻‍💻</p>
     </div>
+    <div id="certifications-list"></div>
   </section>
 
   <!-- EDUCATION -->
-  <section class="section fade-in">
+  <section id="education" class="section fade-in">
     <div class="section-header">
       <h2>Education</h2>
     </div>
-    
-    <div class="education-item">
-      <h3>B.Tech (Computer Science)</h3>
-      <p class="education-school">Symbiosis Institute of Technology</p>
-      <p class="education-details">2019-2023 · GPA: 7.64/10</p>
-    </div>
-
-    <div class="education-item">
-      <h3>12th (MBiPC)</h3>
-      <p class="education-school">Kendriya Vidyalaya AFS Hakimpet</p>
-      <p class="education-details">2018 · 83.2%</p>
-    </div>
-
-    <div class="education-item">
-      <h3>10th</h3>
-      <p class="education-school">Kendriya Vidyalaya AFS Hakimpet</p>
-      <p class="education-details">2016 · 10 CGPA</p>
-    </div>
+    <div id="education-list"></div>
   </section>
 
   <!-- CONTACT -->
@@ -648,20 +347,20 @@
       <h2>Get in Touch</h2>
       <p>I'm always open to discussing new opportunities and interesting projects.</p>
       <div class="footer-links">
-        <a href="https://github.com/AN01KU" target="_blank" class="footer-link">
+        <a href="https://github.com/AN01KU" target="_blank" rel="noopener noreferrer" class="footer-link" id="footer-github">
           <span>GitHub</span>
         </a>
-        <a href="https://www.linkedin.com/in/an01ku/" target="_blank" class="footer-link">
+        <a href="https://www.linkedin.com/in/an01ku/" target="_blank" rel="noopener noreferrer" class="footer-link" id="footer-linkedin">
           <span>LinkedIn</span>
         </a>
-        <a href="https://leetcode.com/u/AN01KU/" target="_blank" class="footer-link">
+        <a href="https://leetcode.com/u/AN01KU/" target="_blank" rel="noopener noreferrer" class="footer-link" id="footer-leetcode">
           <span>LeetCode</span>
         </a>
       </div>
       <div class="footer-contact-info">
-        <a href="mailto:ankush.ganesh@outlook.com" class="footer-contact-link">ankush.ganesh@outlook.com</a>
+        <a href="mailto:ankush.ganesh@outlook.com" class="footer-contact-link" id="footer-email">ankush.ganesh@outlook.com</a>
         <span class="footer-separator">•</span>
-        <a href="tel:+916301598117" class="footer-contact-link">+91-6301598117</a>
+        <a href="tel:+916301598117" class="footer-contact-link" id="footer-phone">+91-6301598117</a>
       </div>
       <!-- <p class="footer-copyright">© 2025 Ankush Ganesh. All rights reserved.</p> -->
     </div>
@@ -702,28 +401,72 @@
 
     document.querySelectorAll('.fade-in, .stagger').forEach(el => observer.observe(el));
 
-    // Projects sort & toggle
-    (function initProjects() {
+    const VISIBLE_PROJECT_COUNT = 4;
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function formatProjectMonth(value) {
+      const [year, month] = value.split('-');
+      const date = new Date(Number(year), Number(month) - 1, 1);
+      return date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
+    }
+
+    function formatProjectTimeline(startDate, endDate) {
+      if (startDate === endDate) return formatProjectMonth(startDate);
+      return `${formatProjectMonth(startDate)} – ${formatProjectMonth(endDate)}`;
+    }
+
+    function renderProjectCard(project, isExtra) {
+      const extraClass = isExtra ? ' project-card--extra' : '';
+      const badge = project.type === 'personal'
+        ? '<span class="project-badge">Personal</span>'
+        : '';
+      const features = (project.features || []).length
+        ? `<ul class="project-features">${project.features.map((feature) => `<li>${escapeHtml(feature)}</li>`).join('')}</ul>`
+        : '';
+      const tags = (project.tags || []).length
+        ? `<div class="project-tags">${project.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>`
+        : '';
+
+      return `
+        <div class="project-card${extraClass}" data-end="${escapeHtml(project.endDate)}" data-start="${escapeHtml(project.startDate)}">
+          <div class="project-header">
+            <div class="project-title-group">
+              <h3><a href="${escapeHtml(project.url)}" target="_blank" rel="noopener noreferrer" class="project-title-link">${escapeHtml(project.name)}</a></h3>
+              <p class="project-timeline">${escapeHtml(formatProjectTimeline(project.startDate, project.endDate))}</p>
+            </div>
+            ${badge}
+          </div>
+          <p class="project-description">${escapeHtml(project.description)}</p>
+          ${features}
+          ${tags}
+        </div>
+      `;
+    }
+
+    function initProjectsToggle() {
       const grid = document.getElementById('projects-grid');
       const toggle = document.getElementById('projects-toggle');
       const toggleWrap = document.querySelector('.projects-toggle-wrap');
-      if (!grid) return;
-
-      const cards = [...grid.querySelectorAll('.project-card')];
-      cards.sort((a, b) => {
-        const endDiff = b.dataset.end.localeCompare(a.dataset.end);
-        if (endDiff !== 0) return endDiff;
-        return (b.dataset.start || '').localeCompare(a.dataset.start || '');
-      });
-      cards.forEach(card => grid.appendChild(card));
+      if (!grid || !toggle) return;
 
       const extraCards = grid.querySelectorAll('.project-card--extra');
       const extraCount = extraCards.length;
 
-      if (!toggle || extraCount === 0) {
+      if (extraCount === 0) {
         toggleWrap?.classList.add('is-hidden');
+        toggle.hidden = true;
         return;
       }
+
+      toggle.hidden = false;
+      toggleWrap?.classList.remove('is-hidden');
 
       const setExpanded = (expanded) => {
         grid.classList.toggle('is-expanded', expanded);
@@ -731,15 +474,290 @@
         toggle.textContent = expanded ? 'Show fewer' : `View all projects (${extraCount} more)`;
       };
 
-      toggle.addEventListener('click', () => {
+      toggle.replaceWith(toggle.cloneNode(true));
+      const freshToggle = document.getElementById('projects-toggle');
+      freshToggle.addEventListener('click', () => {
         setExpanded(!grid.classList.contains('is-expanded'));
       });
-    })();
+      setExpanded(false);
+    }
 
-    // Homelab status
+    async function loadProjects() {
+      const grid = document.getElementById('projects-grid');
+      if (!grid) return;
+
+      try {
+        const response = await fetch(`resources/projects.json?ts=${Date.now()}`);
+        if (!response.ok) throw new Error('Projects file unavailable');
+
+        const data = await response.json();
+        const projects = (data.projects || []).slice().sort((a, b) => {
+          const endDiff = b.endDate.localeCompare(a.endDate);
+          if (endDiff !== 0) return endDiff;
+          return (b.startDate || '').localeCompare(a.startDate || '');
+        });
+
+        grid.innerHTML = projects
+          .map((project, index) => renderProjectCard(project, index >= VISIBLE_PROJECT_COUNT))
+          .join('');
+
+        if (grid.classList.contains('visible')) {
+          grid.classList.add('visible');
+        }
+
+        initProjectsToggle();
+      } catch (error) {
+        grid.innerHTML = '<p class="section-subtitle">Projects could not be loaded.</p>';
+        console.warn('Projects unavailable:', error);
+      }
+    }
+
+    // Site config (profile + social from shared-config)
+    async function loadSiteConfig() {
+      try {
+        const response = await fetch(`resources/site-config.json?ts=${Date.now()}`);
+        if (!response.ok) return;
+
+        const { profile, social } = await response.json();
+
+        const heroName = document.getElementById('hero-name');
+        const heroSubtitle = document.getElementById('hero-subtitle');
+        const heroDescription = document.getElementById('hero-description');
+
+        if (profile?.fullName && heroName) heroName.textContent = profile.fullName;
+        if (profile?.title && profile?.company && heroSubtitle) {
+          heroSubtitle.textContent = `${profile.title} @ ${profile.company}`;
+        } else if (profile?.title && heroSubtitle) {
+          heroSubtitle.textContent = profile.title;
+        }
+
+        if (profile?.tagline && heroDescription) {
+          heroDescription.textContent = profile.tagline;
+          heroDescription.hidden = false;
+        } else if (heroDescription) {
+          heroDescription.hidden = true;
+        }
+
+        if (profile?.fullName && profile?.title) {
+          document.title = `${profile.fullName} — ${profile.title}`;
+        }
+
+        const currentCompanyLink = document.getElementById('current-company-link');
+        const currentCompanyName = document.getElementById('current-company-name');
+        const currentRole = document.getElementById('current-role');
+
+        if (profile?.company && currentCompanyName) {
+          currentCompanyName.textContent = profile.company;
+        }
+        if (profile?.companyUrl && currentCompanyLink) {
+          currentCompanyLink.href = profile.companyUrl;
+        }
+        if (profile?.title && currentRole) {
+          currentRole.textContent = profile.title;
+        }
+
+        const currentLocation = document.getElementById('current-location');
+        if (profile?.location && currentLocation) {
+          currentLocation.textContent = profile.location;
+        }
+
+        const linkMap = [
+          ['hero-github', 'footer-github', social?.githubUrl],
+          ['hero-linkedin', 'footer-linkedin', social?.linkedinUrl],
+          ['hero-leetcode', 'footer-leetcode', social?.leetcodeUrl]
+        ];
+
+        linkMap.forEach(([heroId, footerId, url]) => {
+          if (!url) return;
+          document.getElementById(heroId)?.setAttribute('href', url);
+          document.getElementById(footerId)?.setAttribute('href', url);
+        });
+
+        const email = profile?.email || profile?.emailPersonal;
+        const footerEmail = document.getElementById('footer-email');
+        if (email && footerEmail) {
+          footerEmail.href = `mailto:${email}`;
+          footerEmail.textContent = email;
+        }
+
+        const footerPhone = document.getElementById('footer-phone');
+        if (profile?.phone && footerPhone) {
+          footerPhone.href = `tel:${profile.phone}`;
+          footerPhone.textContent = profile.phoneDisplay || profile.phone;
+        }
+      } catch (error) {
+        console.warn('Site config unavailable:', error);
+      }
+    }
+
+    function formatPublicationDate(value) {
+      if (!value) return '';
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return value;
+      return date.toLocaleString('en-US', { month: 'long', year: 'numeric' });
+    }
+
+    function renderPublication(publication) {
+      const tags = (publication.tags || []).length
+        ? `<div class="publication-tags">${publication.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>`
+        : '';
+      const meta = [publication.publisher, formatPublicationDate(publication.publishedDate)]
+        .filter(Boolean)
+        .join(' · ');
+      const metaHtml = meta ? `<p class="publication-meta">${escapeHtml(meta)}</p>` : '';
+
+      return `
+        <div class="publication-item">
+          <h3>
+            <a href="${escapeHtml(publication.url)}" target="_blank" rel="noopener noreferrer" class="publication-link">
+              ${escapeHtml(publication.title)}
+            </a>
+          </h3>
+          ${metaHtml}
+          <p class="publication-description">${escapeHtml(publication.description)}</p>
+          ${tags}
+        </div>
+      `;
+    }
+
+    async function loadPublications() {
+      const list = document.getElementById('publications-list');
+      if (!list) return;
+
+      try {
+        const response = await fetch(`resources/publications.json?ts=${Date.now()}`);
+        if (!response.ok) throw new Error('Publications file unavailable');
+
+        const data = await response.json();
+        const publications = data.publications || [];
+
+        if (publications.length === 0) {
+          list.innerHTML = '<p class="section-subtitle">No publications listed yet.</p>';
+          return;
+        }
+
+        list.innerHTML = publications.map(renderPublication).join('');
+      } catch (error) {
+        list.innerHTML = '<p class="section-subtitle">Publications could not be loaded.</p>';
+        console.warn('Publications unavailable:', error);
+      }
+    }
+
+    function formatEducationDetails(item) {
+      const years = item.startYear === item.endYear
+        ? String(item.endYear)
+        : `${item.startYear}-${item.endYear}`;
+      return item.details ? `${years} · ${item.details}` : years;
+    }
+
+    function renderEducationItem(item) {
+      return `
+        <div class="education-item">
+          <h3>${escapeHtml(item.degree)}</h3>
+          <p class="education-school">${escapeHtml(item.institution)}</p>
+          <p class="education-details">${escapeHtml(formatEducationDetails(item))}</p>
+        </div>
+      `;
+    }
+
+    async function loadEducation() {
+      const list = document.getElementById('education-list');
+      if (!list) return;
+
+      try {
+        const response = await fetch(`resources/education.json?ts=${Date.now()}`);
+        if (!response.ok) throw new Error('Education file unavailable');
+
+        const data = await response.json();
+        const education = data.education || [];
+
+        if (education.length === 0) {
+          list.innerHTML = '<p class="section-subtitle">No education entries listed yet.</p>';
+          return;
+        }
+
+        list.innerHTML = education.map(renderEducationItem).join('');
+      } catch (error) {
+        list.innerHTML = '<p class="section-subtitle">Education could not be loaded.</p>';
+        console.warn('Education unavailable:', error);
+      }
+    }
+
+    function renderCertification(item) {
+      const title = item.url
+        ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="publication-link">${escapeHtml(item.name)}</a>`
+        : escapeHtml(item.name);
+      const issuer = item.issuer ? `<p class="publication-meta">${escapeHtml(item.issuer)}</p>` : '';
+      const date = item.issuedDate ? `<p class="publication-meta">${escapeHtml(formatPublicationDate(item.issuedDate))}</p>` : '';
+      const tags = (item.tags || []).length
+        ? `<div class="publication-tags">${item.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>`
+        : '';
+
+      return `
+        <div class="publication-item">
+          <h3>${title}</h3>
+          ${issuer}
+          ${date}
+          ${item.description ? `<p class="publication-description">${escapeHtml(item.description)}</p>` : ''}
+          ${tags}
+        </div>
+      `;
+    }
+
+    async function loadCertifications() {
+      const list = document.getElementById('certifications-list');
+      const subtitle = document.getElementById('certifications-subtitle');
+      if (!list) return;
+
+      try {
+        const response = await fetch(`resources/certifications.json?ts=${Date.now()}`);
+        if (!response.ok) throw new Error('Certifications file unavailable');
+
+        const data = await response.json();
+        const certifications = data.certifications || [];
+
+        if (certifications.length === 0) {
+          list.innerHTML = '';
+          if (subtitle) subtitle.hidden = false;
+          return;
+        }
+
+        if (subtitle) subtitle.hidden = true;
+        list.innerHTML = certifications.map(renderCertification).join('');
+      } catch (error) {
+        list.innerHTML = '<p class="section-subtitle">Certifications could not be loaded.</p>';
+        console.warn('Certifications unavailable:', error);
+      }
+    }
+
+    function renderHomelabCard(id, service) {
+      const status = service.status || 'unknown';
+      const tagHtml = service.tag
+        ? `<span class="homelab-tag">${service.tag}</span>`
+        : '';
+
+      return `
+        <a href="${service.url}" target="_blank" rel="noopener noreferrer" class="homelab-card" data-service="${id}">
+          <div class="homelab-card-header">
+            <h3 class="homelab-name">
+              <span class="homelab-status-dot" data-status="${status}" aria-label="Status: ${status}"></span>
+              ${service.name}
+            </h3>
+            ${tagHtml}
+          </div>
+          <p class="homelab-url">${service.displayHost || service.url}</p>
+          <p class="homelab-desc">${service.description || ''}</p>
+          <span class="homelab-arrow" aria-hidden="true">→</span>
+        </a>
+      `;
+    }
+
+    // Homelab status + cards
     async function loadHomelabStatus() {
       const pill = document.getElementById('homelab-count-pill');
       const lastChecked = document.getElementById('homelab-last-checked');
+      const grid = document.getElementById('homelab-grid');
+      const terminalTitle = document.getElementById('homelab-terminal-title');
 
       try {
         const response = await fetch(`resources/homelab-status.json?ts=${Date.now()}`);
@@ -750,18 +768,16 @@
         const entries = Object.entries(services);
         let onlineCount = 0;
 
-        entries.forEach(([id, service]) => {
-          const card = document.querySelector(`.homelab-card[data-service="${id}"]`);
-          if (!card) return;
+        if (terminalTitle && data.host) {
+          terminalTitle.textContent = `${data.host} — services`;
+        }
 
-          const dot = card.querySelector('.homelab-status-dot');
-          if (!dot) return;
+        if (grid) {
+          grid.innerHTML = entries.map(([id, service]) => renderHomelabCard(id, service)).join('');
+        }
 
-          const status = service.status || 'unknown';
-          dot.dataset.status = status;
-          dot.setAttribute('aria-label', `Status: ${status}`);
-
-          if (status === 'online') onlineCount += 1;
+        entries.forEach(([, service]) => {
+          if (service.status === 'online') onlineCount += 1;
         });
 
         if (pill) {
@@ -783,10 +799,16 @@
       } catch (error) {
         if (pill) pill.textContent = 'status unavailable';
         if (lastChecked) lastChecked.textContent = 'Last checked: unavailable';
+        if (grid) grid.innerHTML = '<p class="homelab-notice">Homelab services could not be loaded.</p>';
         console.warn('Homelab status unavailable:', error);
       }
     }
 
+    loadSiteConfig();
+    loadProjects();
+    loadPublications();
+    loadEducation();
+    loadCertifications();
     loadHomelabStatus();
 
     // Setup images code (commented out - uncomment when setup section is enabled)

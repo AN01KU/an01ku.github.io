@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-05",
+  "projects": [
+    {
+      "id": "oneidp",
+      "name": "OneIdP — Zero Trust Access",
+      "url": "https://scalefusion.com/products/oneidp",
+      "type": "work",
+      "employer": "ProMobi Technologies",
+      "startDate": "2023-06",
+      "endDate": "2026-08",
+      "description": "Developed macOS features for OneIdP, a UEM-driven Zero Trust access management platform with conditional access and identity controls.",
+      "features": [
+        "Custom macOS Login Window with location, network & time-based auth",
+        "Just-in-Time Admin with temporary privilege elevation & audit logs",
+        "LAPS — Local Admin Password Solution with automated rotation"
+      ],
+      "tags": ["Swift", "macOS", "IAM", "Zero Trust", "Authentication"],
+      "platforms": { "linkedin": true, "portfolio": true },
+      "text": {
+        "linkedin": {
+          "name": "OneID",
+          "description": "Built the macOS login plugin for Scalefusion OneIdP, enabling secure, identity-based device authentication with policy-driven access controls based on location, network, and time.",
+          "highlights": [
+            "Worked on automated local admin credential management and password rotation to reduce privileged-access risk across enterprise-managed macOS devices."
+          ],
+          "tags": ["Objective-C", "Secure Authentication"]
+        }
+      }
+    },
+    {
+      "id": "scalefusion-mdm",
+      "name": "Scalefusion — macOS & iOS MDM",
+      "url": "https://scalefusion.com/macos-management-solution",
+      "type": "work",
+      "employer": "ProMobi Technologies",
+      "startDate": "2023-06",
+      "endDate": "2026-08",
+      "description": "Developed macOS and iOS clients for Scalefusion, a leading enterprise MDM platform. Built system-level security, update management, and app distribution features.",
+      "features": [
+        "FileVault Encryption & Passcode Policies for enterprise security",
+        "OS Updates with Declarative Device Management (DDM)",
+        "Remote Terminal & Device Mirroring for troubleshooting",
+        "App Catalog supporting 500+ macOS applications"
+      ],
+      "tags": ["Swift", "macOS", "iOS", "MDM", "DDM"],
+      "platforms": { "linkedin": true, "portfolio": true },
+      "text": {
+        "linkedin": {
+          "name": "UEM Software | Unified Endpoint Management (UEM) Solution",
+          "description": "Built and maintained macOS and iOS clients for an enterprise MDM platform. Shipped features across app management, OS update enforcement, and remote device control on managed Apple devices.",
+          "tags": ["Swift (Programming Language)", "iOS Development"]
+        }
+      }
+    },
+    {
+      "id": "veltar",
+      "name": "Veltar — Endpoint Security & Compliance",
+      "url": "https://scalefusion.com/products/veltar",
+      "type": "work",
+      "employer": "ProMobi Technologies",
+      "startDate": "2024-08",
+      "endDate": "2026-08",
+      "description": "Built endpoint security features for Veltar, a Secure Web Gateway and Automated Compliance solution on top of Scalefusion UEM.",
+      "features": [
+        "Automated Compliance with CIS benchmark enforcement",
+        "Secure Web Gateway (SWG) with on-device web filtering",
+        "VPN tunnel for secure corporate resource access",
+        "App Control for macOS using Endpoint Security Framework",
+        "IO Device Access Control (DAC) for USB/peripheral management"
+      ],
+      "tags": ["Swift", "macOS", "Endpoint Security", "VPN", "SWG"],
+      "platforms": { "linkedin": true, "portfolio": true },
+      "text": {
+        "linkedin": {
+          "name": "Veltar Endpoint Security | Empowering Security, Enabling Innovation",
+          "description": "Built a system extension using the Endpoint Security Framework to intercept and block unauthorized app execution and USB device access on managed macOS devices.",
+          "tags": ["Endpoint Security", "Threat & Vulnerability Management"]
+        }
+      }
+    },
+    {
+      "id": "nuovopay",
+      "name": "NuovoPay",
+      "url": "https://nuovopay.com",
+      "type": "work",
+      "employer": "ProMobi Technologies",
+      "startDate": "2023-06",
+      "endDate": "2026-08",
+      "description": "Built the macOS client for NuovoPay, a Device Financing Risk Management platform. Implemented custom lock screens with offline support, automated packaging/notarization, and remote update mechanisms.",
+      "features": [],
+      "tags": ["Swift", "macOS"],
+      "platforms": { "linkedin": false, "portfolio": true }
+    },
+    {
+      "id": "money-manager",
+      "name": "Money Manager",
+      "url": "https://github.com/AN01KU/Money-Manager-iOS",
+      "type": "personal",
+      "startDate": "2026-01",
+      "endDate": "2026-04",
+      "description": "Full-stack personal finance app — iOS client built with SwiftUI + SwiftData (MVVM) and a Go backend REST API using Chi router, JWT auth, and PostgreSQL.",
+      "features": [
+        "Expense tracking, monthly budgets, recurring bills, and group expense splitting",
+        "Offline-first sync engine with automatic retry on connectivity restore"
+      ],
+      "tags": ["SwiftUI", "SwiftData", "Go", "Chi", "JWT", "PostgreSQL"],
+      "platforms": { "linkedin": true, "portfolio": true },
+      "text": {
+        "linkedin": {
+          "description": "Personal project — full-stack finance app with a native iOS client (SwiftUI, SwiftData) and a Go backend. Offline-first with automatic sync on reconnect.",
+          "tags": ["Full-Stack Development", "SQL"]
+        }
+      }
+    },
+    {
+      "id": "voteblock",
+      "name": "VoteBlock",
+      "url": "https://github.com/AN01KU/VoteBlock-app",
+      "type": "personal",
+      "association": "SIT - Symbiosis Institute of Technology",
+      "startDate": "2022-10",
+      "endDate": "2022-11",
+      "description": "Developed a blockchain-based voting system to enhance security, transparency, and trust in e-voting. Designed a decentralized ledger and a secure, user-friendly interface.",
+      "features": [],
+      "tags": ["React", "Solidity", "Firebase", "TailwindCSS", "Blockchain"],
+      "platforms": { "linkedin": true, "portfolio": true },
+      "text": {
+        "linkedin": {
+          "description": "Developed VoteBlock, a decentralized web application built using Ethereum smart contracts to enable secure and tamper-proof digital voting. Designed for transparency, immutability, and auditability in democratic elections. Made using ReactJS, Bootstrap, Solidity, Firebase.",
+          "tags": ["JavaScript", "HTML"]
+        }
+      }
+    },
+    {
+      "id": "shareme",
+      "name": "ShareMe",
+      "url": "https://github.com/AN01KU/ShareMe",
+      "type": "personal",
+      "startDate": "2022-10",
+      "endDate": "2022-10",
+      "description": "Created a Pinterest clone to share, like, comment, and download images. Deployed using Netlify with ReactJS, Tailwind, Sanity, and Google Identity Service.",
+      "features": [],
+      "tags": ["React", "Tailwind", "Sanity", "Netlify"],
+      "platforms": { "linkedin": false, "portfolio": true }
+    },
+    {
+      "id": "blood-bank",
+      "name": "Blood Bank Management Website",
+      "url": "https://github.com/AN01KU/Blood-bank",
+      "type": "personal",
+      "startDate": "2022-07",
+      "endDate": "2022-07",
+      "description": "Created a website to digitize workflow of blood donation in India. Users can register for appointments, and locate nearby donors and blood banks.",
+      "features": [],
+      "tags": ["HTML", "JavaScript", "CSS", "NodeJS", "Firebase"],
+      "platforms": { "linkedin": false, "portfolio": true }
+    },
+    {
+      "id": "foodbucks",
+      "name": "Food Management Website",
+      "url": "https://github.com/AN01KU/Foodbucks",
+      "type": "personal",
+      "startDate": "2022-07",
+      "endDate": "2022-07",
+      "description": "Created a website for managing food inventory for Akshay Patra NGO. Users can see nearby NGO food centres and admins can view food inventory details.",
+      "features": [],
+      "tags": ["HTML", "CSS", "NodeJS"],
+      "platforms": { "linkedin": false, "portfolio": true }
+    },
+    {
+      "id": "poll-app",
+      "name": "Poll App",
+      "url": "https://github.com/AN01KU/POLL-APP",
+      "type": "personal",
+      "startDate": "2022-02",
+      "endDate": "2022-02",
+      "description": "Created an Android app for users to take quick polls, quizzes and analyze responses. Developed using Java and Firebase.",
+      "features": [],
+      "tags": ["Java", "Android", "Firebase"],
+      "platforms": { "linkedin": false, "portfolio": true }
+    }
+  ]
+}

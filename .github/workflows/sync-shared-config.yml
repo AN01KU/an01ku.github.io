@@ -1,0 +1,53 @@
+name: Sync Shared Config
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout portfolio
+        uses: actions/checkout@v4
+
+      - name: Checkout shared-config
+        uses: actions/checkout@v4
+        with:
+          repository: AN01KU/shared-config
+          token: ${{ secrets.SHARED_CONFIG_TOKEN }}
+          path: shared-config
+
+      - name: Build site config
+        run: bash scripts/build-site-config.sh shared-config resources/site-config.json
+
+      - name: Build projects
+        run: bash scripts/build-projects.sh shared-config resources/projects.json
+
+      - name: Build publications
+        run: bash scripts/build-publications.sh shared-config resources/publications.json
+
+      - name: Build education
+        run: bash scripts/build-education.sh shared-config resources/education.json
+
+      - name: Build certifications
+        run: bash scripts/build-certifications.sh shared-config resources/certifications.json
+
+      - name: Check homelab services
+        run: bash scripts/check-homelab.sh shared-config/data/homelab.json resources/homelab-status.json
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add resources/site-config.json resources/projects.json resources/publications.json resources/education.json resources/certifications.json resources/homelab-status.json
+          if git diff --staged --quiet; then
+            echo "No changes from shared-config sync."
+          else
+            git commit -m "chore: sync from shared-config"
+            git push
+          fi

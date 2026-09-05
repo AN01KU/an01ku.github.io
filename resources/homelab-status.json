@@ -1,9 +1,14 @@
 {
   "updatedAt": "2026-09-05T10:29:00Z",
+  "host": "homelab@ankushganesh.cloud",
+  "domain": "ankushganesh.cloud",
   "services": {
     "homeassistant": {
       "name": "Home Assistant",
       "url": "https://homeassistant.ankushganesh.cloud",
+      "tag": "smart home",
+      "description": "Smart home automation hub for devices, scenes, and daily routines.",
+      "displayHost": "homeassistant.ankushganesh.cloud",
       "status": "online",
       "httpCode": 403,
       "checkedAt": "2026-09-05T10:29:00Z"
@@ -11,6 +16,9 @@
     "beszel": {
       "name": "Beszel",
       "url": "https://beszel.ankushganesh.cloud",
+      "tag": "monitoring",
+      "description": "Lightweight monitoring for server health, system metrics, and Docker containers.",
+      "displayHost": "beszel.ankushganesh.cloud",
       "status": "online",
       "httpCode": 403,
       "checkedAt": "2026-09-05T10:29:00Z"
@@ -18,6 +26,9 @@
     "hermes": {
       "name": "Hermes",
       "url": "https://hermes.ankushganesh.cloud",
+      "tag": "gateway",
+      "description": "Internal homelab gateway for service routing and utility integrations.",
+      "displayHost": "hermes.ankushganesh.cloud",
       "status": "online",
       "httpCode": 403,
       "checkedAt": "2026-09-05T10:29:00Z"
@@ -25,6 +36,9 @@
     "pihole": {
       "name": "Pi-hole",
       "url": "https://pihole.ankushganesh.cloud/admin/login",
+      "tag": "network",
+      "description": "Network-wide DNS filtering and ad blocking across all home devices.",
+      "displayHost": "pihole.ankushganesh.cloud",
       "status": "online",
       "httpCode": 403,
       "checkedAt": "2026-09-05T10:29:00Z"
@@ -32,6 +46,9 @@
     "n8n": {
       "name": "n8n",
       "url": "https://n8n.ankushganesh.cloud",
+      "tag": "automation",
+      "description": "Workflow automation for Gmail labeling, Telegram bots, and daily task integrations.",
+      "displayHost": "n8n.ankushganesh.cloud",
       "status": "online",
       "httpCode": 403,
       "checkedAt": "2026-09-05T10:29:00Z"

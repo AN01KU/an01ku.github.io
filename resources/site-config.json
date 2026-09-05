@@ -1,0 +1,21 @@
+{
+  "updatedAt": "2026-09-05T12:00:00Z",
+  "profile": {
+    "fullName": "Ankush Ganesh",
+    "displayName": "AN01KU",
+    "title": "Software Engineer",
+    "company": "Cyberhaven",
+    "companyUrl": "https://www.cyberhaven.com",
+    "email": "ankush.ganesh@outlook.com",
+    "phone": "+916301598117",
+    "phoneDisplay": "+91-6301598117",
+    "location": "Bangalore, India"
+  },
+  "social": {
+    "githubUsername": "AN01KU",
+    "githubUrl": "https://github.com/AN01KU",
+    "linkedinUrl": "https://www.linkedin.com/in/an01ku/",
+    "leetcodeUrl": "https://leetcode.com/u/AN01KU/",
+    "portfolioUrl": "https://an01ku.github.io/"
+  }
+}
