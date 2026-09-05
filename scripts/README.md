@@ -36,7 +36,7 @@ Requires `bash` and `jq`.
 ## Deploy triggers
 
 - Push to `main` (site HTML/CSS changes)
-- Every 10 minutes (homelab status refresh)
+- Every 12 hours (homelab status refresh + redeploy)
 - Manual `workflow_dispatch`
 
-After a `shared-config` change, re-run **Deploy Site** manually or wait for the next scheduled run.
+After a `shared-config` change, re-run **Deploy Site** manually or wait for the next scheduled run (every 12 hours).
