@@ -11,12 +11,25 @@ if ! command -v jq >/dev/null 2>&1; then
   exit 1
 fi
 
-set -a
-# shellcheck disable=SC1090
-source "${CONFIG_DIR}/profile.env"
-# shellcheck disable=SC1090
-source "${CONFIG_DIR}/social.env"
-set +a
+load_env_file() {
+  local file="$1"
+  while IFS= read -r line || [[ -n "$line" ]]; do
+    [[ "$line" =~ ^[[:space:]]*# ]] && continue
+    [[ -z "${line//[[:space:]]/}" ]] && continue
+    if [[ "$line" =~ ^([A-Za-z_][A-Za-z0-9_]*)=(.*)$ ]]; then
+      local key="${BASH_REMATCH[1]}"
+      local val="${BASH_REMATCH[2]}"
+      val="${val#"${val%%[![:space:]]*}"}"
+      val="${val%"${val##*[![:space:]]}"}"
+      if [[ "$val" =~ ^\"(.*)\"$ ]]; then val="${BASH_REMATCH[1]}"; fi
+      if [[ "$val" =~ ^\'(.*)\'$ ]]; then val="${BASH_REMATCH[1]}"; fi
+      export "$key=$val"
+    fi
+  done < "$file"
+}
+
+load_env_file "${CONFIG_DIR}/profile.env"
+load_env_file "${CONFIG_DIR}/social.env"
 
 mkdir -p "$(dirname "$OUTPUT")"
 
