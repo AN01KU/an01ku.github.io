@@ -1,3 +1,11 @@
 # macOS
 .DS_Store
 resources/.DS_Store
+
+# Generated at deploy time from shared-config (not committed)
+resources/site-config.json
+resources/projects.json
+resources/publications.json
+resources/education.json
+resources/certifications.json
+resources/homelab-status.json

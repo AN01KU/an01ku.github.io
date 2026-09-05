@@ -1,15 +1,25 @@
-# Portfolio site — generated files
+# Portfolio site — generated resources
 
-`resources/site-config.json`, `resources/projects.json`, `resources/publications.json`, `resources/education.json`, and `resources/certifications.json` are generated from [shared-config](https://github.com/AN01KU/shared-config) by GitHub Actions (`.github/workflows/sync-shared-config.yml`).
+JSON under `resources/` is **not committed** to this repo. CI checks out private [shared-config](https://github.com/AN01KU/shared-config), builds the JSON files, and deploys them via GitHub Pages — nothing sensitive is stored in git.
 
-`resources/homelab-status.json` is also generated from `shared-config/data/homelab.json`.
+## What gets generated
+
+| File | Source |
+|------|--------|
+| `site-config.json` | `profile.env` + `social.env` |
+| `projects.json` | `data/projects.json` + portfolio filter (`platforms.portfolio`) |
+| `publications.json` | `data/publications.json` |
+| `education.json` | `data/education.json` |
+| `certifications.json` | `data/certifications.json` |
+| `homelab-status.json` | live health check from `data/homelab.json` |
+
+Static assets (`favicon.svg`, resume PDF, pc-setup photos) stay in this repo.
 
 ## Local refresh
 
-With `shared-config` cloned next to this repo:
+Clone `shared-config` next to this repo, then:
 
 ```bash
-# Git Bash / Linux / macOS
 bash scripts/sync-shared-config.sh
 
 # Or set a custom path
@@ -18,16 +28,15 @@ SHARED_CONFIG_DIR=/path/to/shared-config bash scripts/sync-shared-config.sh
 
 Requires `bash` and `jq`.
 
-## What lives in shared-config
+## GitHub setup
 
-| File | Used for |
-|------|----------|
-| `profile.env` | Name, `TITLE`, `COMPANY`, `EMAIL`, phone, location |
-| `social.env` | GitHub, LinkedIn, LeetCode links |
-| `data/homelab.json` | Homelab service list + card copy |
-| `data/projects.json` | Project catalog (links, tags, descriptions) |
-| `data/publications.json` | Publications |
-| `data/education.json` | Education |
-| `data/certifications.json` | Certifications |
+1. **Pages source**: Settings → Pages → Build and deployment → **GitHub Actions**
+2. **Secret** `SHARED_CONFIG_TOKEN`: fine-grained PAT with **Contents: Read** on `shared-config`
 
-Edit those in `shared-config`; this repo picks them up on the next workflow run (every 10 min or manual dispatch).
+## Deploy triggers
+
+- Push to `main` (site HTML/CSS changes)
+- Every 10 minutes (homelab status refresh)
+- Manual `workflow_dispatch`
+
+After a `shared-config` change, re-run **Deploy Site** manually or wait for the next scheduled run.

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build resources/site-config.json from shared-config env files.
+# Build site-config.json from shared-config env files.
 # Usage: build-site-config.sh <shared-config-dir> [output.json]
 set -euo pipefail
 
@@ -56,5 +56,3 @@ jq -n \
       portfolioUrl: $portfolioUrl
     }
   }' > "$OUTPUT"
-
-cat "$OUTPUT"

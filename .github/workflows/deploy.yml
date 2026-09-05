@@ -1,0 +1,50 @@
+name: Deploy Site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+
+      - name: Checkout shared-config
+        uses: actions/checkout@v4
+        with:
+          repository: AN01KU/shared-config
+          ref: master
+          token: ${{ secrets.SHARED_CONFIG_TOKEN }}
+          path: shared-config
+
+      - name: Prepare resources
+        run: |
+          sudo apt-get update && sudo apt-get install -y jq
+          bash scripts/prepare-resources.sh shared-config
+          rm -rf shared-config
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
