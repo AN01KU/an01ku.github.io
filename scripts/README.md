@@ -11,6 +11,8 @@ JSON under `resources/` is **not committed** to this repo. CI checks out private
 | `publications.json` | `data/publications.json` |
 | `education.json` | `data/education.json` |
 | `certifications.json` | `data/certifications.json` |
+| `skills.json` | `data/skills.json` |
+| `hobbies.json` | `data/hobbies.json` |
 | `homelab-status.json` | live health check from `data/homelab.json` |
 
 Static assets (`favicon.svg`, resume PDF, pc-setup photos) stay in this repo.

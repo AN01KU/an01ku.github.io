@@ -12,6 +12,8 @@ bash "${ROOT}/scripts/filter-portfolio-projects.sh" \
 bash "${ROOT}/scripts/copy-data-json.sh" publications.json "$CONFIG_DIR" "${ROOT}/resources/publications.json"
 bash "${ROOT}/scripts/copy-data-json.sh" education.json "$CONFIG_DIR" "${ROOT}/resources/education.json"
 bash "${ROOT}/scripts/copy-data-json.sh" certifications.json "$CONFIG_DIR" "${ROOT}/resources/certifications.json"
+bash "${ROOT}/scripts/copy-data-json.sh" skills.json "$CONFIG_DIR" "${ROOT}/resources/skills.json"
+bash "${ROOT}/scripts/copy-data-json.sh" hobbies.json "$CONFIG_DIR" "${ROOT}/resources/hobbies.json"
 bash "${ROOT}/scripts/check-homelab.sh" \
   "${CONFIG_DIR}/data/homelab.json" "${ROOT}/resources/homelab-status.json"
 

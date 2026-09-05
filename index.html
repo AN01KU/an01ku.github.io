@@ -183,15 +183,7 @@
       <h2>Hobbies & Interests</h2>
     </div>
     
-    <div class="hobbies-list stagger">
-      <span class="hobby-tag">Tech & Building Setups</span>
-      <span class="hobby-tag">Gaming</span>
-      <span class="hobby-tag">Football</span>
-      <span class="hobby-tag">F1</span>
-      <span class="hobby-tag">Anime</span>
-      <span class="hobby-tag">Music and Piano</span>
-      <span class="hobby-tag">Travel & Exploration</span>
-    </div>
+    <div class="hobbies-list stagger" id="hobbies-list"></div>
   </section>
 
   <!-- SETUP GALLERY -->
@@ -241,89 +233,7 @@
       <h2>Skills</h2>
     </div>
     
-    <div class="skills-grid stagger">
-      <div class="skill-category">
-        <h3>Languages</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Swift</span>
-          <span class="skill-tag">Objective-C</span>
-          <span class="skill-tag">Go</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">JavaScript</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Apple Frameworks</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">SwiftUI</span>
-          <span class="skill-tag">UIKit</span>
-          <span class="skill-tag">Cocoa</span>
-          <span class="skill-tag">SwiftData</span>
-          <span class="skill-tag">Endpoint Security</span>
-          <span class="skill-tag">WKWebView</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Security</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Data Loss Prevention (DLP)</span>
-          <span class="skill-tag">Data Security Posture Management (DSPM)</span>
-          <span class="skill-tag">Endpoint Security</span>
-          <span class="skill-tag">Enterprise Data Security</span>
-          <span class="skill-tag">VPN & Content Filtering</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Backend & Infra</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Go</span>
-          <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">CI/CD</span>
-          <span class="skill-tag">Bash</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Tools</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Xcode</span>
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">JIRA</span>
-          <span class="skill-tag">Postman</span>
-          <span class="skill-tag">TestFlight</span>
-          <span class="skill-tag">GitLab CI</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Core Subjects</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Data Structures & Algorithms</span>
-          <span class="skill-tag">System Design</span>
-          <span class="skill-tag">Concurrency & Multithreading</span>
-          <span class="skill-tag">Operating Systems</span>
-          <span class="skill-tag">Networking</span>
-          <span class="skill-tag">Database Management</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Soft Skills</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Problem Solving</span>
-          <span class="skill-tag">Ownershipn</span>
-          <span class="skill-tag">Attention to Detail</span>
-          <span class="skill-tag">Continuous Learning</span>
-          <span class="skill-tag">Cross team communication</span>
-          <span class="skill-tag">Reasearch and Developement</span>
-        </div>
-      </div>
-    </div>
-    </div>
+    <div class="skills-grid stagger" id="skills-grid"></div>
   </section>
 
   <!-- CERTIFICATIONS -->
@@ -765,6 +675,67 @@
       }
     }
 
+    function renderSkillCategory(category) {
+      const tags = (category.items || [])
+        .map((item) => `<span class="skill-tag">${escapeHtml(item)}</span>`)
+        .join('');
+
+      return `
+        <div class="skill-category">
+          <h3>${escapeHtml(category.name)}</h3>
+          <div class="skill-tags">${tags}</div>
+        </div>
+      `;
+    }
+
+    async function loadSkills() {
+      const grid = document.getElementById('skills-grid');
+      if (!grid) return;
+
+      try {
+        const response = await fetch(`resources/skills.json?ts=${Date.now()}`);
+        if (!response.ok) throw new Error('Skills file unavailable');
+
+        const data = await response.json();
+        const categories = data.categories || [];
+
+        if (categories.length === 0) {
+          grid.innerHTML = '<p class="section-subtitle">No skills listed yet.</p>';
+          return;
+        }
+
+        grid.innerHTML = categories.map(renderSkillCategory).join('');
+      } catch (error) {
+        grid.innerHTML = '<p class="section-subtitle">Skills could not be loaded.</p>';
+        console.warn('Skills unavailable:', error);
+      }
+    }
+
+    async function loadHobbies() {
+      const list = document.getElementById('hobbies-list');
+      if (!list) return;
+
+      try {
+        const response = await fetch(`resources/hobbies.json?ts=${Date.now()}`);
+        if (!response.ok) throw new Error('Hobbies file unavailable');
+
+        const data = await response.json();
+        const hobbies = data.hobbies || [];
+
+        if (hobbies.length === 0) {
+          list.innerHTML = '<p class="section-subtitle">No hobbies listed yet.</p>';
+          return;
+        }
+
+        list.innerHTML = hobbies
+          .map((hobby) => `<span class="hobby-tag">${escapeHtml(hobby)}</span>`)
+          .join('');
+      } catch (error) {
+        list.innerHTML = '<p class="section-subtitle">Hobbies could not be loaded.</p>';
+        console.warn('Hobbies unavailable:', error);
+      }
+    }
+
     function renderHomelabCard(id, service) {
       const status = service.status || 'unknown';
       const tagHtml = service.tag
@@ -844,6 +815,8 @@
     loadPublications();
     loadEducation();
     loadCertifications();
+    loadSkills();
+    loadHobbies();
     loadHomelabStatus();
 
     // Setup images code (commented out - uncomment when setup section is enabled)

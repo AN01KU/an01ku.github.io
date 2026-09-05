@@ -8,4 +8,6 @@ resources/projects.json
 resources/publications.json
 resources/education.json
 resources/certifications.json
+resources/skills.json
+resources/hobbies.json
 resources/homelab-status.json

@@ -8,9 +8,9 @@ Live site: https://an01ku.github.io/
 - Build scripts under `scripts/`
 - GitHub Actions workflows under `.github/workflows/`
 
-Profile, projects, publications, education, certifications, and homelab service list are **not** stored in this repo. They come from the private [shared-config](https://github.com/AN01KU/shared-config) repo and are built at deploy time.
+Profile, projects, publications, education, certifications, skills, hobbies, and homelab service list are **not** stored in this repo. They come from the private [shared-config](https://github.com/AN01KU/shared-config) repo and are built at deploy time.
 
-Experience, skills, and hobbies remain in `index.html` for now.
+Experience remains in `index.html` for now.
 
 ## Deployment
 
